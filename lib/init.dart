@@ -26,9 +26,9 @@ abstract class AppInitializer {
 
 /// The dependencies which are provided at the root of the app.
 class RootDependencies {
-  RootDependencies({required this.counterRepository});
+  RootDependencies({required this.notesRepository});
 
-  final NotesRepository counterRepository;
+  final NotesRepository notesRepository;
 }
 
 /// Provides the [RootDependencies] to the widget tree below.
@@ -45,7 +45,7 @@ class ProvideRootDependencies extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MultiProvider(
         providers: [
-          Provider.value(value: dependencies.counterRepository),
+          Provider.value(value: dependencies.notesRepository),
         ],
         child: child,
       );
@@ -67,6 +67,18 @@ class DefaultAppInitializer extends AppInitializer {
 
     _setupCouchbaseLogging();
     await _openDatabase();
+    await _database.createIndex(
+      // Any existing index, with the same name, will be replaced with
+      // a new index, with the new configuration.
+      'note-fts',
+      FullTextIndexConfiguration(
+        // We want both the title and body of the note to be indexed.
+        ['title'],
+        // By selecting the language, that is primarily used in the
+        // indexed fields, users will get better search results.
+        language: FullTextLanguage.english,
+      ),
+    );
   }
 
   void _setupCouchbaseLogging() {
@@ -101,6 +113,6 @@ class DefaultAppInitializer extends AppInitializer {
 
   @override
   RootDependencies get rootDependencies => RootDependencies(
-        counterRepository: NotesRepository(database: _database),
+        notesRepository: NotesRepository(database: _database),
       );
 }

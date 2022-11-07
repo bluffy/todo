@@ -27,8 +27,8 @@ class NotesApp extends StatelessWidget {
           child: child!,
         ),
       ),
-      // home: NotesPage.withProviders(id: 'A'),
       home: const NotesPage(),
+      //home: NotesPage.withProviders(id: 'A'),
     );
   }
 }

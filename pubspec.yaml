@@ -44,6 +44,7 @@ dependencies:
   collection: ^1.16.0
   google_fonts: ^3.0.1
   cbl_flutter_ce: ^2.1.2
+  async: ^2.9.0
 
 dev_dependencies:
   flutter_test:
