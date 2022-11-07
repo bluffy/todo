@@ -1,56 +1,34 @@
 import 'package:flutter/material.dart';
+import 'pages/initialization_page.dart';
+import 'init.dart';
+import 'core/context.dart';
+import 'pages/notes_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(NotesApp(initializer: DefaultAppInitializer()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class NotesApp extends StatelessWidget {
+  const NotesApp({Key? key, required this.initializer}) : super(key: key);
+
+  final AppInitializer initializer;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // Remove the debug banner
-        debugShowCheckedModeBanner: true,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.from(colorScheme: const ColorScheme.light()),
+      darkTheme: ThemeData.from(colorScheme: const ColorScheme.dark()),
+      navigatorKey: navigatorKey,
+      builder: (context, child) => InitializationPage(
+        initialize: initializer.ensureInitialized,
+        builder: (context) => ProvideRootDependencies(
+          dependencies: initializer.rootDependencies,
+          child: child!,
         ),
-        home: const NotePage());
-  }
-}
-
-class NotePage extends StatefulWidget {
-  const NotePage({Key? key}) : super(key: key);
-
-  @override
-  State<NotePage> createState() => _NotePageState();
-}
-
-class _NotePageState extends State<NotePage> {
-  bool isAdd = false;
-  void showAdd() {
-    setState(() {
-      isAdd = true;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: const Text('Notes')),
-        body: Container(
-          alignment: Alignment.topCenter,
-          padding: const EdgeInsets.all(20),
-          child: Row(
-            children: [
-              Visibility(
-                visible: !isAdd,
-                child: ElevatedButton(
-                  onPressed: () => {showAdd()},
-                  child: new Text('Click me ${isAdd}'),
-                ),
-              )
-            ],
-          ),
-        ));
+      ),
+      // home: NotesPage.withProviders(id: 'A'),
+      home: const NotesPage(),
+    );
   }
 }
