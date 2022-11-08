@@ -5,24 +5,57 @@ import 'package:collection/collection.dart';
 
 //import 'package:rxdart/rxdart.dart';
 
-//import '../core/environment.dart';
+//import '../c
+
+class NoteModel {
+  String? id;
+  String? title;
+  String? description;
+  int? sort;
+  int? isDone;
+  String? date;
+  String? time;
+  int? dateTime;
+  int? status;
+  String type = "note";
+
+  NoteModel({
+    this.id,
+    this.title,
+    this.description,
+    this.sort,
+    this.isDone,
+    this.date,
+    this.time,
+    this.dateTime,
+    this.status,
+  });
+  Map<String, dynamic> forInsert() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['type'] = type;
+    data['title'] = title;
+    data['description'] = description;
+    data['isDone'] = isDone;
+    data['date'] = date;
+    data['time'] = time;
+    data['dateTime'] = dateTime;
+    data['status'] = status;
+    return data;
+  }
+}
 
 class NotesRepository {
   NotesRepository({required this.database});
 
   final AsyncDatabase database;
   Future<MutableDocument> createNote({
-    required String title,
+    required NoteModel model,
   }) async {
     // In Couchbase Lite, data is stored in JSON like documents. The default
     // constructor of MutableDocument creates a new document with a randomly
     // generated id.
-    final doc = MutableDocument({
-      // Since documents of different types are all stored in the same database,
-      // it is customary to store the type of the document in the `type` field.
-      'type': 'note',
-      'title': title,
-    });
+
+    final doc = MutableDocument(model.forInsert());
 
     // Now save the new note in the database.
     await database.saveDocument(doc);
@@ -69,15 +102,16 @@ class NotesRepository {
     ORDER BY rank(note-fts)
     LIMIT 10
     ''',
-    );
+    ); 
+    WHERE AND  MATCH('note-fts', 'title')
     */
     final query = await Query.fromN1ql(
       database,
       r'''
     SELECT META().id AS id, title
-    FROM _
-    WHERE type = 'note'
-    ORDER BY 'title'
+    FROM _ 
+     WHERE  type = 'note'
+    ORDER BY 'sort'
     LIMIT 100
     ''',
     );

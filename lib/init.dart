@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:blutodo/data/notes_repository.dart';
 import 'package:cbl/cbl.dart';
 import 'package:cbl_flutter/cbl_flutter.dart';
@@ -70,7 +71,7 @@ class DefaultAppInitializer extends AppInitializer {
     await _database.createIndex(
       // Any existing index, with the same name, will be replaced with
       // a new index, with the new configuration.
-      'note-fts',
+      'noteFTSIndex',
       FullTextIndexConfiguration(
         // We want both the title and body of the note to be indexed.
         ['title'],
@@ -107,7 +108,8 @@ class DefaultAppInitializer extends AppInitializer {
       // instances of the app, running in parallel, do not use the same
       // database. This is necessary because two or more replicators accessing
       // the same database can cause issues with locking of the database.
-      'counters',
+      'notes',
+      //'notes-${Random().nextInt(0xFFFFFF)}',
     );
   }
 

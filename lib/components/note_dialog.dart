@@ -13,8 +13,10 @@ class NoteDialog extends StatelessWidget {
   final NotesRepository notesRepository;
 
   final titleText = TextEditingController();
+  final descripionText = TextEditingController();
   save() {
-    notesRepository.createNote(title: titleText.text);
+    final model = NoteModel(title: titleText.text);
+    notesRepository.createNote(model: model);
     onClose();
   }
 
@@ -22,18 +24,24 @@ class NoteDialog extends StatelessWidget {
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextFormField(
-              controller: titleText,
-              decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () => {save()},
-              child: new Text('Speichern'),
-            )
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: TextFormField(
+                  controller: titleText,
+                  decoration: const InputDecoration(
+                    border: UnderlineInputBorder(),
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: ElevatedButton.icon(
+                  onPressed: () => {save()},
+                  icon: const Icon(Icons.save),
+                  label: const Text('Speichern'),
+                ))
           ],
         ),
       );
