@@ -40,12 +40,20 @@ class NotesPage extends StatefulWidget {
 }
 
 class _NotesPageState extends State<NotesPage> {
-  var _isInitialized = false;
-  bool isAdd = false;
+  //var _isInitialized = false;
+  bool isOpen = false;
+  var selecedID = "0";
 
-  void showAdd() {
+  void openDialog(String id) {
     setState(() {
-      isAdd = true;
+      selecedID = id;
+      isOpen = true;
+    });
+  }
+  void closeDialog() {
+    setState(() {
+      selecedID = "new";
+      isOpen = false;
     });
   }
 
@@ -77,8 +85,32 @@ class _NotesPageState extends State<NotesPage> {
                                   padding: EdgeInsets.zero,
                                   shrinkWrap: true,
                                   itemCount: list.length,
-                                  itemBuilder: (context, index) {
-                                    return Text(list[index].title);
+                                  itemBuilder: (context, index) {    
+                                                      
+                                    return Row(
+                                      children: [
+                                         Checkbox(
+                                          onChanged:  !isOpen  ? (bool? value) => {
+                                          }: null,
+                                          value: false,
+                                        ),
+
+                                        Expanded(
+                                          child: InkWell(
+                                            onTap: () => {
+                                              openDialog(list[index].id);
+                                            },
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(8.0),
+                                              child: Text(list[index].title),
+                                            )
+                                          ),
+                                        )
+                                      ]
+                                    );
+
+
+
                                   });
                             } else {
                               return const Text('');
@@ -86,20 +118,20 @@ class _NotesPageState extends State<NotesPage> {
                           }
                         }),
                     Visibility(
-                        visible: isAdd,
+                        visible: isOpen && selecedID == 'new',
                         child: NoteDialog(
                           notesRepository: notesRepository,
                           onClose: () {
-                            setState(() {
-                              isAdd = false;
-                            });
+                            closeDialog();
                           },
                         )),
                     Visibility(
-                      visible: !isAdd,
+                      visible: !isOpen,
                       child: ElevatedButton.icon(
                         icon: const Icon(Icons.add),
-                        onPressed: () => {showAdd()},
+                        onPressed: () => {
+                          openDialog("new")
+                          },
                         label: const Text('Neue Notiz'),
                       ),
                     )

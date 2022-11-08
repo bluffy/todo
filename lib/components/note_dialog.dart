@@ -12,12 +12,22 @@ class NoteDialog extends StatelessWidget {
 
   final NotesRepository notesRepository;
 
-  final titleText = TextEditingController();
-  final descripionText = TextEditingController();
+  final controllerTitle = TextEditingController();
+  final controllerDescription = TextEditingController();
+
   save() {
-    final model = NoteModel(title: titleText.text);
+    final model = NoteModel(
+      title: controllerTitle.text.trim(),
+      description: controllerTitle.text.trim()
+    );
+
+    if (model.title == "" && model.description == ""){
+          onClose();
+          return;
+    }
     notesRepository.createNote(model: model);
     onClose();
+
   }
 
   @override
@@ -30,8 +40,20 @@ class NoteDialog extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: TextFormField(
-                  controller: titleText,
+                  controller: controllerTitle,
                   decoration: const InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: "Aufgabe",
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: TextFormField(
+                  minLines: 2,
+                  maxLines: 100,
+                  controller: controllerDescription,
+                  decoration: const InputDecoration(
+                    hintText: "Beschreibung",
                     border: UnderlineInputBorder(),
                   ),
                 )),
