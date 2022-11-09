@@ -1,42 +1,69 @@
 import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import '../utils/tools.dart';
+import 'dart:async';
+
+enum NoteEvents {
+  saveNote,
+}
 
 class NoteDialog extends StatefulWidget {
-  NoteDialog({
+  const NoteDialog({
     this.noteID,
+    required this.noteEvents,
     this.onClose,
-    required this.notesRepository,
+    this.notesRepository,
     Key? key,
   }) : super(key: key);
-  method2(value) => createState().method2(value);
 
+  final Stream<NoteEvents> noteEvents;
   final VoidCallback? onClose;
-  final NotesRepository notesRepository;
+  final NotesRepository? notesRepository;
   final String? noteID;
 
   @override
-  _NoteDialog createState() => _NoteDialog(
-      notesRepository: notesRepository, noteID: noteID, onClose: onClose);
+  State<NoteDialog> createState() => _NoteDialog();
 }
 
 class _NoteDialog extends State<NoteDialog> {
-  method2(value) => print("method in page 2${value}");
-  _NoteDialog(
-      {this.noteID, this.onClose, required this.notesRepository, Key? key});
+  VoidCallback? onClose;
+  NotesRepository? notesRepository;
+  String? noteID;
+  StreamSubscription<NoteEvents>? _subEvents;
 
-  final VoidCallback? onClose;
-  final NotesRepository notesRepository;
-  final String? noteID;
+  @override
+  void initState() {
+    super.initState();
+    _subEvents = widget.noteEvents.asBroadcastStream().listen((event) {
+      if (event == NoteEvents.saveNote) {
+        saveNote();
+      }
+    });
+
+    if (widget.noteID != null) {
+      noteID = widget.noteID;
+    }
+    if (widget.notesRepository != null) {
+      notesRepository = widget.notesRepository;
+    }
+    if (widget.onClose != null) {
+      onClose = widget.onClose;
+    }
+  }
+
+  @override
+  void dispose() {
+    _subEvents?.cancel();
+    super.dispose();
+  }
 
   final controllerTitle = TextEditingController();
   final controllerDescription = TextEditingController();
 
   Future<NoteModel> note() async {
-    print(" Future<NoteModel> note() async:" + noteID.toString());
+    //print(" Future<NoteModel> note() async:" + noteID.toString());
     if (noteID != null) {
-      return notesRepository.getNote(noteID.toString());
+      return notesRepository!.getNote(noteID.toString());
     }
     return Future.delayed(
       const Duration(),
@@ -44,23 +71,27 @@ class _NoteDialog extends State<NoteDialog> {
     );
   }
 
-  save() {
+  saveNote() {
     final noteModel = NoteModel();
     noteModel.title = controllerTitle.text.trim();
     noteModel.description = controllerDescription.text.trim();
 
     if (noteModel.title == "" && noteModel.description == "") {
-      onClose!();
+      if (onClose != null) {
+        onClose!();
+      }
 
       return;
     }
     if (noteID == null) {
-      notesRepository.createNote(model: noteModel);
+      notesRepository!.createNote(model: noteModel);
     } else {
       noteModel.id = noteID;
-      notesRepository.updateNote(model: noteModel);
+      notesRepository!.updateNote(model: noteModel);
     }
-    onClose!();
+    if (onClose != null) {
+      onClose!();
+    }
   }
 
   @override
@@ -69,8 +100,6 @@ class _NoteDialog extends State<NoteDialog> {
         future: note(),
         builder: (BuildContext context, AsyncSnapshot<NoteModel> note) {
           if (note.hasData) {
-            print("titel: " + note.data!.title.toString());
-
             if (noteID != null) {
               controllerTitle.text = Tools.nvlString(note.data!.title);
               controllerDescription.text =
@@ -105,7 +134,7 @@ class _NoteDialog extends State<NoteDialog> {
                   Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: ElevatedButton.icon(
-                        onPressed: () => {save()},
+                        onPressed: () => {saveNote()},
                         icon: const Icon(Icons.save),
                         label: const Text('Speichern'),
                       ))
@@ -113,7 +142,7 @@ class _NoteDialog extends State<NoteDialog> {
               ),
             );
           } else {
-            return Text("loading");
+            return const Text("loading");
           }
         });
   }

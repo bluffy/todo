@@ -4,8 +4,6 @@ import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
 import '../components/note_dialog.dart';
 import 'package:provider/provider.dart';
-import '../blocs/bloc_helper.dart';
-import '../blocs/notes_bloc.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
@@ -15,6 +13,15 @@ class NotesPage extends StatefulWidget {
 }
 
 class _NotesPageState extends State<NotesPage> {
+  StreamController<NoteEvents> events =
+      StreamController<NoteEvents>.broadcast();
+
+  @override
+  void dispose() {
+    events.close();
+    super.dispose();
+  }
+
   //var _isInitialized = false;
   bool isOpen = false;
   var selecedID = "0";
@@ -41,6 +48,20 @@ class _NotesPageState extends State<NotesPage> {
       selecedID = "0";
       isOpen = false;
     });
+  }
+
+  Color getColor(id) {
+    //return setState(() {
+
+    // setState(() {
+    if (id == selecedID) {
+      return Colors.red;
+    }
+    return Colors.transparent;
+
+    //  });
+
+    // });
   }
 
   @override
@@ -75,6 +96,7 @@ class _NotesPageState extends State<NotesPage> {
                                   itemBuilder: (context, index) {
                                     if (isOpen && selecedID == list[index].id) {
                                       return NoteDialog(
+                                        noteEvents: events.stream,
                                         noteID: list[index].id,
                                         notesRepository: notesRepository,
                                         onClose: () {
@@ -91,17 +113,29 @@ class _NotesPageState extends State<NotesPage> {
                                         ),
                                         Expanded(
                                           child: InkWell(
-                                              onTap: () => {
-                                                    if (!isOpen)
-                                                      {
-                                                        openDialog(
-                                                            list[index].id)
-                                                      }
-                                                  },
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(8.0),
-                                                child: Text(list[index].title),
+                                              onTap: () {
+                                                setState(() {
+                                                  if (!isOpen) {
+                                                    if (selecedID ==
+                                                        list[index].id) {
+                                                      openDialog(
+                                                          list[index].id);
+                                                    }
+                                                    selecedID = list[index].id;
+                                                  } else {
+                                                    events.sink.add(
+                                                        NoteEvents.saveNote);
+                                                  }
+                                                });
+                                              },
+                                              child: Container(
+                                                color: getColor(list[index].id),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(8.0),
+                                                  child:
+                                                      Text(list[index].title),
+                                                ),
                                               )),
                                         )
                                       ]);
@@ -115,6 +149,7 @@ class _NotesPageState extends State<NotesPage> {
                     Visibility(
                         visible: isOpen && selecedID == 'new',
                         child: NoteDialog(
+                          noteEvents: events.stream,
                           notesRepository: notesRepository,
                           onClose: () {
                             closeDialog();
@@ -132,11 +167,8 @@ class _NotesPageState extends State<NotesPage> {
                       visible: isOpen,
                       child: ElevatedButton.icon(
                         icon: const Icon(Icons.add),
-                        onPressed: () => {
-                          NoteDialog(notesRepository: notesRepository)
-                              .method2("test")
-                        },
-                        label: const Text('test'),
+                        onPressed: () => {events.sink.add(NoteEvents.saveNote)},
+                        label: const Text('Speichern'),
                       ),
                     )
                   ],
