@@ -88,6 +88,21 @@ class NotesRepository {
     return results.firstOrNull?.integer(0) ?? 0;
   }
 
+  Future<NoteModel> getNote(String id) async {
+    final document = (await database.document(id))!;
+    return NoteModel(
+      id: document.id,
+      title: document.string('title'),
+      description: document.string('description'),
+      sort: document.integer('sort'),
+      date: document.string('date'),
+      dateTime: document.integer('dateTime'),
+      isDone: document.integer('isDone'),
+      status: document.integer('status'),
+      time: document.string('string'),
+    );
+  }
+
   Future<List<NoteSearchResult>> searchNotes(/*Query queryString*/) async {
     // Creating a query has some overhead and if a query is executed
     // many times, it should be created once and reused. For simplicity

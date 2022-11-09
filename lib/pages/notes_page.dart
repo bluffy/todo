@@ -10,31 +10,6 @@ import '../blocs/notes_bloc.dart';
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
 
-/*
-  static Widget withProviders({required String id}) => ChangeNotifierProvider(
-        /*
-        create: (context) => NotesBloc(
-          id: id,
-          notesRepository: context.read(),
-        ),*/
-        create: (context) => {
-          notesRepository: context.read()
-        },
-        child: const NotesPage(),
-        
-      );
-*/
-
-/*
-  static Widget withProviders({required String id}) => ChangeNotifierProvider(
-        create: (context) => CounterBloc(
-          id: id,
-          counterRepository: context.read(),
-        ),
-        child: const CounterPage(),
-      );
-      */
-
   @override
   State<NotesPage> createState() => _NotesPageState();
 }
@@ -43,6 +18,15 @@ class _NotesPageState extends State<NotesPage> {
   //var _isInitialized = false;
   bool isOpen = false;
   var selecedID = "0";
+  var test = "";
+
+  var noteModel = NoteModel();
+
+  void modelChanged(m) {
+    setState(() {
+      noteModel = m;
+    });
+  }
 
   void openDialog(String id) {
     setState(() {
@@ -50,9 +34,11 @@ class _NotesPageState extends State<NotesPage> {
       isOpen = true;
     });
   }
+
   void closeDialog() {
     setState(() {
-      selecedID = "new";
+      noteModel = NoteModel();
+      selecedID = "0";
       isOpen = false;
     });
   }
@@ -70,6 +56,7 @@ class _NotesPageState extends State<NotesPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Text(test),
                     FutureBuilder<List<NoteSearchResult>>(
                         future: notes,
                         builder: (context, future) {
@@ -85,32 +72,39 @@ class _NotesPageState extends State<NotesPage> {
                                   padding: EdgeInsets.zero,
                                   shrinkWrap: true,
                                   itemCount: list.length,
-                                  itemBuilder: (context, index) {    
-                                                      
-                                    return Row(
-                                      children: [
-                                         Checkbox(
-                                          onChanged:  !isOpen  ? (bool? value) => {
-                                          }: null,
+                                  itemBuilder: (context, index) {
+                                    if (isOpen && selecedID == list[index].id) {
+                                      return NoteDialog(
+                                        notesRepository: notesRepository,
+                                        onClose: () {
+                                          closeDialog();
+                                        },
+                                      );
+                                    } else {
+                                      return Row(children: [
+                                        Checkbox(
+                                          onChanged: !isOpen
+                                              ? (bool? value) => {}
+                                              : null,
                                           value: false,
                                         ),
-
                                         Expanded(
                                           child: InkWell(
-                                            onTap: () => {
-                                              openDialog(list[index].id);
-                                            },
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(8.0),
-                                              child: Text(list[index].title),
-                                            )
-                                          ),
+                                              onTap: () => {
+                                                    if (!isOpen)
+                                                      {
+                                                        openDialog(
+                                                            list[index].id)
+                                                      }
+                                                  },
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Text(list[index].title),
+                                              )),
                                         )
-                                      ]
-                                    );
-
-
-
+                                      ]);
+                                    }
                                   });
                             } else {
                               return const Text('');
@@ -129,9 +123,7 @@ class _NotesPageState extends State<NotesPage> {
                       visible: !isOpen,
                       child: ElevatedButton.icon(
                         icon: const Icon(Icons.add),
-                        onPressed: () => {
-                          openDialog("new")
-                          },
+                        onPressed: () => {openDialog("new")},
                         label: const Text('Neue Notiz'),
                       ),
                     )
