@@ -63,6 +63,23 @@ class NotesRepository {
     return doc;
   }
 
+  Future<void> updateNote({
+    required NoteModel model,
+  }) async {
+    // In Couchbase Lite, data is stored in JSON like documents. The default
+    // constructor of MutableDocument creates a new document with a randomly
+    // generated id.
+
+    final doc = (await database.document(model.id.toString()))!;
+
+    // Now save the new note in the database.
+    final mutableDoc = doc!.toMutable();
+    mutableDoc['title'].string = model.title;
+    mutableDoc['description'].string = model.description;
+
+    await database.saveDocument(mutableDoc);
+  }
+
   /// Returns the current value of the counter with the given [id] from the
   /// database.
   Future<int> counterValue(String id) async {
@@ -89,6 +106,7 @@ class NotesRepository {
   }
 
   Future<NoteModel> getNote(String id) async {
+    print("test: id" + id);
     final document = (await database.document(id))!;
     return NoteModel(
       id: document.id,

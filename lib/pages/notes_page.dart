@@ -75,6 +75,7 @@ class _NotesPageState extends State<NotesPage> {
                                   itemBuilder: (context, index) {
                                     if (isOpen && selecedID == list[index].id) {
                                       return NoteDialog(
+                                        noteID: list[index].id,
                                         notesRepository: notesRepository,
                                         onClose: () {
                                           closeDialog();
@@ -125,6 +126,17 @@ class _NotesPageState extends State<NotesPage> {
                         icon: const Icon(Icons.add),
                         onPressed: () => {openDialog("new")},
                         label: const Text('Neue Notiz'),
+                      ),
+                    ),
+                    Visibility(
+                      visible: isOpen,
+                      child: ElevatedButton.icon(
+                        icon: const Icon(Icons.add),
+                        onPressed: () => {
+                          NoteDialog(notesRepository: notesRepository)
+                              .method2("test")
+                        },
+                        label: const Text('test'),
                       ),
                     )
                   ],

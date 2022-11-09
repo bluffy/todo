@@ -3,30 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import '../utils/tools.dart';
 
-class NoteDialog extends StatefulWidget {
+class NoteDialog extends StatelessWidget {
   NoteDialog({
     this.noteID,
-    this.onClose,
+    required this.onClose,
     required this.notesRepository,
     Key? key,
   }) : super(key: key);
-  method2(value) => createState().method2(value);
 
-  final VoidCallback? onClose;
-  final NotesRepository notesRepository;
-  final String? noteID;
-
-  @override
-  _NoteDialog createState() => _NoteDialog(
-      notesRepository: notesRepository, noteID: noteID, onClose: onClose);
-}
-
-class _NoteDialog extends State<NoteDialog> {
-  method2(value) => print("method in page 2${value}");
-  _NoteDialog(
-      {this.noteID, this.onClose, required this.notesRepository, Key? key});
-
-  final VoidCallback? onClose;
+  final VoidCallback onClose;
   final NotesRepository notesRepository;
   final String? noteID;
 
@@ -44,23 +29,20 @@ class _NoteDialog extends State<NoteDialog> {
     );
   }
 
-  save() {
-    final noteModel = NoteModel();
+  save(noteModel) {
     noteModel.title = controllerTitle.text.trim();
     noteModel.description = controllerDescription.text.trim();
 
     if (noteModel.title == "" && noteModel.description == "") {
-      onClose!();
-
+      onClose();
       return;
     }
     if (noteID == null) {
       notesRepository.createNote(model: noteModel);
     } else {
-      noteModel.id = noteID;
       notesRepository.updateNote(model: noteModel);
     }
-    onClose!();
+    onClose();
   }
 
   @override
@@ -105,7 +87,7 @@ class _NoteDialog extends State<NoteDialog> {
                   Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: ElevatedButton.icon(
-                        onPressed: () => {save()},
+                        onPressed: () => {save(note.data!)},
                         icon: const Icon(Icons.save),
                         label: const Text('Speichern'),
                       ))
