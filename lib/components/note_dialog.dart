@@ -19,8 +19,14 @@ class NoteDialog extends StatelessWidget {
   final controllerTitle = TextEditingController();
   final controllerDescription = TextEditingController();
 
-  holen(){
-      notesRepository.getNote(noteID.toString());
+  Future<NoteModel> holen() async {
+    if (noteID != null) {
+      return notesRepository.getNote(noteID.toString());
+    }
+    return Future.delayed(
+      const Duration(),
+      () => NoteModel(),
+    );
   }
 
   save() {
@@ -36,7 +42,7 @@ class NoteDialog extends StatelessWidget {
   }
 
   @override
-  Future<Widget> build(BuildContext context) async   {
+  Widget build(BuildContext context) {
     /*
         if (noteID != null) {
     
@@ -45,44 +51,46 @@ class NoteDialog extends StatelessWidget {
         }
 */
 
-    final test = awaeit notesRepository.getNote(noteID.toString());
+    final data = notesRepository.getNote(noteID.toString());
 
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: TextFormField(
-                controller: controllerTitle,
-                decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  hintText: "Aufgabe",
-                ),
-              )),
-          Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: TextFormField(
-                minLines: 2,
-                maxLines: 100,
-                controller: controllerDescription,
-                decoration: const InputDecoration(
-                  hintText: "Beschreibung",
-                  border: UnderlineInputBorder(),
-                ),
-              )),
-          Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: ElevatedButton.icon(
-                onPressed: () => {save()},
-                icon: const Icon(Icons.save),
-                label: const Text('Speichern'),
-              ))
-        ],
-      ),
-    );
+    return FutureBuilder(
+        builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: TextFormField(
+                  controller: controllerTitle,
+                  decoration: const InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: "Aufgabe",
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: TextFormField(
+                  minLines: 2,
+                  maxLines: 100,
+                  controller: controllerDescription,
+                  decoration: const InputDecoration(
+                    hintText: "Beschreibung",
+                    border: UnderlineInputBorder(),
+                  ),
+                )),
+            Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: ElevatedButton.icon(
+                  onPressed: () => {save()},
+                  icon: const Icon(Icons.save),
+                  label: const Text('Speichern'),
+                ))
+          ],
+        ),
+      );
+    });
   }
 }
