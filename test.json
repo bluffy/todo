@@ -1,0 +1,4817 @@
+{
+    "attributtypen": {
+        "7081": [
+            708101,
+            708102,
+            708103,
+            708104,
+            708105,
+            708106,
+            708117,
+            708107,
+            708108,
+            708119,
+            708109,
+            708115,
+            708116,
+            708111,
+            708112,
+            708120,
+            708118,
+            708113,
+            708141,
+            708162,
+            708163
+        ],
+        "7101": [
+            710101,
+            710102,
+            710105,
+            710104,
+            710103,
+            710106
+        ],
+        "7121": [
+            712101,
+            712121,
+            712122,
+            712103,
+            712105,
+            712123,
+            712110,
+            712108,
+            712109,
+            712119,
+            712118,
+            712145,
+            712146,
+            712147,
+            712148,
+            712149,
+            712120,
+            712130,
+            712192
+        ]
+    },
+    "vorort_parameter": {
+        "132436": {
+            "bez": "Vor-Ort-Parameter pro Probe - Trinkwasser",
+            "attributtypen": [
+                716101,
+                7161104,
+                7161105,
+                716107,
+                7161108,
+                7161116,
+                7161117,
+                716111,
+                716112,
+                716113,
+                716120,
+                7161109,
+                7161110,
+                7161114,
+                716117,
+                716149,
+                7161111,
+                7161112,
+                7161113,
+                716157,
+                7161103,
+                716166,
+                7161107,
+                716169,
+                716167,
+                716168,
+                716191,
+                716198
+            ]
+        },
+        "132451": {
+            "bez": "Allgemeine Vor-Ort-Parameter - Trinkwasser",
+            "attributtypen": [
+                713101,
+                713102,
+                713103,
+                713104,
+                713106,
+                713105,
+                713118
+            ]
+        }
+    },
+    "objekte": {
+        "152119": {
+            "attribute": {
+                "708101": "Münchenstift - Haus St. Josef (JOS)",
+                "708102": "Haus St. Josef",
+                "708104": "Luise-Kieselbach-Platz 2",
+                "708105": "81377",
+                "708106": "München",
+                "708108": "München",
+                "708109": "Objekt mit EU-Zulassung,\r\naus diesem Grund besondere Anforderungen an Probenahme in Küchen (eigentlich Münchenstift-intern jeder Küchenstrang gefordert, Ritzl in Absprache mit Münchenstift festgelegt, dass max. 5 Zapfstellen zusammengefasst und als eine Einheit (eine Probe) beprobt werden können (Stand: 25.01.2016)",
+                "708111": "Memet Basöz",
+                "708112": "0152 57962553",
+                "708113": "muenchenstift.hsg@apleona.com ; sandra.hierl@apleona.com",
+                "708115": ""
+            },
+            "bez": "Münchenstift - Haus St. Josef (JOS)",
+            "messpunkte": [
+                {
+                    "id": 167034,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG 1.039 Kaltwassereinspeisung West/ Garmischer Str. TWK nach Zähler Auslaufhahn",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167035,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG 1.121 Kaltwassereinspeisung Ost/ Weilheimer Str. TWK nach Zähler Auslaufhahn",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167000,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Austritt TWE PH",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 08:52:12"
+                },
+                {
+                    "id": 951131,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Eintritt [wU/NU] EH (TWK)",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 08:58:14"
+                },
+                {
+                    "id": 166998,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Zirkulation TWZ PH",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 09:00:50"
+                },
+                {
+                    "id": 490562,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Austritt TWE PH",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 08:59:36"
+                },
+                {
+                    "id": 3348453,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Eintritt [wu/NU] EH (TWK)",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 08:58:43"
+                },
+                {
+                    "id": 166999,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Zirkulation TWZ PH",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 09:00:15"
+                },
+                {
+                    "id": 166997,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale HWA Garmischer Str./West PH Kaltwasserverteiler unten",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 166993,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale HWA Weilheimer Str./Ost PH Kaltwasserverteiler unten",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 166996,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 1/Ost Austritt TWE PH",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3348454,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 1/Ost Eintritt [wu/NU] EH (TWK)",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 166994,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 1/Ost Zirkulation TWZ PH",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 490560,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 2/Ost Austritt TWE PH",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3348455,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 2/Ost Eintritt [wu/NU] EH (TWK)",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 166995,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1. UG1.056 Zentrale Weilheimer Str. Boiler 2/Ost Zirkulation TWZ PH",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 2274894,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1.UG Garmischer Str. Kaltwassereinspeisung Boiler 3+4 Verteiler Entleerungshahn",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 2274895,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "1.UG Weilheimer Str. Kaltwassereinspeisung Boiler 1+2 Verteiler Entleerungshahn",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 951148,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 01 1.071 Lager unrein WH PH",
+                        "710102": "110001",
+                        "710103": "Entnahmestelle im OG 02 stillgelegt",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 877436,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost EG Großküche SP Zapfstelle 2 (gegenüber Kombid.) TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3271168,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost EG Großküche Spülküche SP Auslauf an Spülbrausenarmatur (gegenüb. Aussenwand) TWW",
+                        "710102": "110001",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 877434,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost EG Großküche Vorbereitungsplatz Auslauf an Spülbrausenarmatur (gegenüb. Spülküche) TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 877435,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost EG Großküche Zapfstelle 3 Auslauf an Spülbrausenarmatur (gegenüber Schwenkpfanne) TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 1497097,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB01 0.118 Pflegebad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167003,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB02 1.142 Pflegebad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167008,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB04 1.133 Bewohnerzimmer Bad Armatur WB TWW",
+                        "710102": "110001",
+                        "710103": "Strang 1.133 = gleicher Strang 1.135 (Whg. links nebenan)",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 2274899,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB04 Bewohnerzimmer 1.100 Bad WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 2274898,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB04 Pflegebad 1.136 WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348524,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB04 Raum 1.131 (rechts neben 1.133) Bad [wU/NU] WB TWW",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348523,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB04 Raum 1.135 (links neben 1.133) Bad [wU/NU] WB TWW",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nStrang 1.135 = gleicher Strang 1.133",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 1497645,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB05/WMS 2.140 Pflegebad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167013,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB06 2.089 Bewohnerbad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167032,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.084 Pflegebad Verbrühschutzarmatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167017,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.084 Pflegebad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167031,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.112 Bewohnerbad Armatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167015,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.112 Bewohnerbad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 1497098,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.134 Pflegebad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167020,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.134 Pflegebad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167019,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 2.157 Bewohnerbad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3348525,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB07 Raum/ Whg. 2.135 (über 1.133) Bad [wU/NU] WB TWW",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nStrang 2.135 = gleicher Strang 1.133 (Whg. darüber)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167021,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB08 3.142 Pflegebad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 1497648,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB08 3.146 WC Herren Armatur WB",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 1176736,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.104 WC Personal Damen Armatur WB TWW",
+                        "710102": "110001",
+                        "710103": "als Ersatz für \"WB10 3.106 Personalapartment\"",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 1497656,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.105 Bewohnerzimmer Armatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 1497654,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.105 Bewohnerzimmer Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 877437,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.106 Personalapartment Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167028,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.124 & 3.126 Bewohnerbad Armatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 2036352,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.143 Bewohnerzimmer Armatur WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 1497650,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.145 Bewohnerzimmer Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 2036354,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "Ost WB10 3.147 Bewohnerzimmer Armatur WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167007,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB04 1.125 Küche Armatur Spüle TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 258075,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB06 2.045 WC Damen TWW AG",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 258076,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB06 2.071 Bewohnerbad TWW WB",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167016,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB07 2.084 Pflegebad Hutzwanne Dusche",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167014,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB07 2.112 Bewohnerbad Duschkopf",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4531147,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB08 Raum 3.023 Bewohnerbad WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167026,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB09 3.059 Bewohnerbad Armatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167033,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB10 3.126 Bewohnerbad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167027,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB10 3.126 Bewohnerbad Dusche Schlauch",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 2274897,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WB10 Bewohnerzimmer 3.136 Bad WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4531148,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "WEST Raum 3.065 Personalwhg. Bad WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4531146,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB03 Raum 1.075 (unter 2.077 Küche Spüle) Lager unrein AG TWK [wU/NU]",
+                        "710102": "110001",
+                        "710103": "Entnahmestelle stranggleich unter Küche Personalwohnung 2.077",
+                        "710104": 0,
+                        "710105": 4,
+                        "710106": "PN-Stelle für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)"
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 11:17:49"
+                },
+                {
+                    "id": 3348504,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalappartment 4 Raum 3.038 (über 2.038 Pflegebad WB) WB TWW Bad [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:22:21"
+                },
+                {
+                    "id": 167024,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.033 WC Damen TWW AG",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167029,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.036 Personaldusche Damen Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 09:42:08"
+                },
+                {
+                    "id": 3271191,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.057 Personalwhg. (Ambulanter Dienst)  Bad WB TWW [wu/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167025,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.059 Personalwhg. (ehem. Besprechung) Armatur WB TWW",
+                        "710102": "110001",
+                        "710103": "Strang 3.059 = gleicher Strang 3.057",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:37:09"
+                },
+                {
+                    "id": 877438,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.061 Küche Armatur Spüle TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 877439,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.061 Küche Armatur Spüle TWW",
+                        "710102": "110001",
+                        "710103": "Strang für 3.061 = benachbarter Strang zu Strang 3.057/3.059",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:36:39"
+                },
+                {
+                    "id": 3384224,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.063 Personaldusche Herren Armatur WB TWW",
+                        "710102": "110001",
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:27:23"
+                },
+                {
+                    "id": 3384253,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) Personalwhg.3.055 (links neben 3.057 WB) Bad WB TWW [wu/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3953862,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Raum 2.031 Zahnarzt WB TWK",
+                        "710102": "110001",
+                        "710103": "mutmaßlich Strangende (Steigstangbelüfter UP/ hinter Abdeckung prüfen)",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3953861,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Raum 2.031 Zahnarzt WB TWW",
+                        "710102": "110001",
+                        "710103": "mutmaßlich Strangende (Strangbelüfter)",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3348494,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Raum 2.045 Damen-/ barrierefreies WC WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348484,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Raum 2.069 (unter 3.057 Personalwhg.) Bewohnerbad WB TWW [wu/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nStrang 2.069 = gleicher Strang 3.057",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348515,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Raum 3.065 (über 2.077 Küche Spüle) Personalwhg. Bad WB WB TWK [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:34:34"
+                },
+                {
+                    "id": 167023,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West Tagespflege-/ Personalbereich (ehem. WB09) 3.033 WC Damen Armatur WB TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167001,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB02 1.001 Küche Armatur Spüle TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 877433,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB02 1.001 Küche Armatur Spüle TWKCh",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167030,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB02 1.001 Küche Armatur Spüle TWW",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 11:26:12"
+                },
+                {
+                    "id": 4531142,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB02 1.001 Küche SP",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167002,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB02 1.002 Bad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167006,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB03 1.038 Bad Armatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167005,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB03 1.047 Küche Armatur Spüle TWK",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 167004,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB03 1.047 Küche Armatur Spüle TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167010,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.038 Pflegebad Armatur WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:45:07"
+                },
+                {
+                    "id": 4531143,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.038 Pflegebad Armatur WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167011,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.067 Bewohnerbad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4531144,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.067 Bewohnerbad WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4531145,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.075 Pflegebad  WB TWW",
+                        "710102": "110001",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167012,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.075 Pflegebad Verbrühschutzarmatur WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:57:02"
+                },
+                {
+                    "id": 167009,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 2.077 Küche Armatur Spüle TWK",
+                        "710102": "110001",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 15:08:58"
+                },
+                {
+                    "id": 2274896,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 Pflegebad 2.036 WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:51:59"
+                },
+                {
+                    "id": 3348502,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 Raum 2.036 (links neben 2.038 Pflegebad WB) Bad WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nThermostat-/ Verbrühschutzarmatur",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348503,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 Raum 2.040 (rechts neben 2.038 Pflegebad WB) Bad WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nexterner Verbrühschutz",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 3348513,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 Raum 2.075 (links neben 2.077 Küche Spüle) Bad WB (Sensorarmatur) TWK [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU) | \nSensorarmatur",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 11:03:10"
+                },
+                {
+                    "id": 3348514,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB06 Raum 2.079 (rechts neben 2.077 KücheSpüle) Bad WB TWK [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 11:02:39"
+                },
+                {
+                    "id": 167018,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB07 2.096 Stationsbad Verbrühschutzarmatur WB TWW",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 3348492,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.021 (links neben 3.023 Bewohnerbad WB) Bad WB TWW [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 167022,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.023 Bewohnerbad Armatur WB TWW",
+                        "710102": "110001",
+                        "710103": "Einzelzimmer mit Dusche",
+                        "710104": 0,
+                        "710105": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:29:05"
+                },
+                {
+                    "id": 3348493,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.025 (rechts neben 3.023 Bewohnerbad WB) Küche SP TWW [wU/NU]",
+                        "710102": "110001",
+                        "710103": "zus. MP für weitergehende Untersuchung (wU) / Nachuntersuchung (NU)",
+                        "710104": 0,
+                        "710105": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:18:07"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 09:50:02",
+                    "id": -10002,
+                    "attribute": {
+                        "710101": "West Tagespflege (ehem. WB09) 3.035 Gemeinschaftsraum Wohngruppe SP TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 10:04:37",
+                    "id": -10004,
+                    "attribute": {
+                        "710101": "West Tagespflege (ehem. WB09) 3.033 WC Damen/ Herren Armatur WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:12",
+                    "id": -10006,
+                    "attribute": {
+                        "710101": "West Tagespflege (ehem. WB09) 3.031 Barrierefreies WC Armatur WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:10:26",
+                    "id": -10009,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.001 Bewohnerbad WB TWW",
+                        "710102": 110001,
+                        "710103": "Einzelzimmer mit Dusche",
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:35:54",
+                    "id": -10011,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.056 Personalwhg. Armatur WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:09:31",
+                    "id": -10013,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.054 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:36:52",
+                    "id": -10015,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.050 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:19:15",
+                    "id": -10017,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.055 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:19:08",
+                    "id": -10019,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.051 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:25:38",
+                    "id": -10021,
+                    "attribute": {
+                        "710101": "West Personalbereich (ehem. WB09) 3.045 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:36:56",
+                    "id": -10023,
+                    "attribute": {
+                        "710101": "West Personalbereich 3.066 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:40:27",
+                    "id": -10025,
+                    "attribute": {
+                        "710101": "West Personalbereich 3.073 Personalwhg. Armatur WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:47:08",
+                    "id": -10027,
+                    "attribute": {
+                        "710101": "West Personalbereich 3.072 (bei TRH 5) Personalwhg. Armatur WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 12:51:23",
+                    "id": -10029,
+                    "attribute": {
+                        "710101": "West Personalbereich 3.081 Personalwhg. Armatur WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:07:27",
+                    "id": -10031,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.004 Bewohnerbad WB TWW",
+                        "710102": 110001,
+                        "710103": "Doppelzimmer mit Dusche",
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:15:39",
+                    "id": -10033,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.017 Bewohnerbad WB TWW",
+                        "710102": 110001,
+                        "710103": "Doppelzimmer mit Dusche",
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:02",
+                    "id": -10035,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.017 Bewohnerbad WB TWW",
+                        "710102": 110001,
+                        "710105": 3
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:24:15",
+                    "id": -10037,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.021 Bewohnerbad WB TWW [wU/NU]",
+                        "710102": 110001,
+                        "710105": 4
+                    },
+                    "neu": 1
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 13:30:56",
+                    "id": -10039,
+                    "attribute": {
+                        "710101": "West WB08 Raum 3.020 Bewohnerbad Armatur WB TWW",
+                        "710102": 110001,
+                        "710103": "Doppelzimmer mit Dusche",
+                        "710105": 3
+                    },
+                    "neu": 1
+                }
+            ]
+        },
+        "4720790": {
+            "attribute": {
+                "708101": "GM 4229 Toni Park",
+                "708102": "GM 4229 Toni Park",
+                "708104": "Wilhelmine-Reichard-Str. 7",
+                "708105": "86159",
+                "708106": "Augsburg",
+                "708108": "Augsburg",
+                "708111": "Bernhard Tiehs",
+                "708112": "+49 731 9340 7168",
+                "708113": "bernhard.tiehs@goldbeck.de",
+                "708115": "",
+                "708120": "bernhard.tiehs@goldbeck.de"
+            },
+            "bez": "GM 4229 Toni Park",
+            "messpunkte": [
+                {
+                    "id": 4854933,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG (01HAR), BT Ost, Technikraum, nach Zähler / vor Filter, PH -fehlt- (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853883,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG (02HAR), BT Ost, Technikraum, nach Filter / vor Enthärtung, PH (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4854934,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG (03HAR), BT Ost, Technikraum, nach Enthärtung / vor DEA, PH -fehlt- (PWC-ChEH)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4854936,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG (04HAR), BT Ost, Technikraum, nach Enthärtung / vor DEA, PH -fehlt- (PWC)",
+                        "710102": "110001",
+                        "710103": "Messpunkt für NU bei GW-Überschreitung MiBi",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4855335,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG (05HAR), BT Ost, Technikraum, nach DEA / zu Verteilung PH -fehlt- (PWC)",
+                        "710102": "110001",
+                        "710103": "Messpunkt für NU bei GW-Überschreitung MiBi",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4853867,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG, BT Ost, Infineon, Keller 6, Herren-Umkleide, DU links (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4853868 \"01 UG, BT Ost, Infineon, Herren-Umkleide Keller 6, DU rechts (PWH)\""
+                    }
+                },
+                {
+                    "id": 4853868,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG, BT Ost, Infineon, Keller 6, Herren-Umkleide, DU rechts (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4853867 \"01 UG, BT Ost, Infineon, Herren-Umkleide Keller 6, DU links (PWH)\""
+                    }
+                },
+                {
+                    "id": 4853869,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG, BT Ost, Infineon, Keller 8, Damen-Umkleide, DU (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4853881,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG, BT Süd, FitYou, Technikraum, TWEA Abgang PH -fehlt-  (PWH-TWE)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853882,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "01 UG, BT Süd, FitYou, Technikraum, TWEA Abgang PH -fehlt- (PWH-C / TWZ)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4854945,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Nord, Fujitsu, Umkleide, DU 2. v. links (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke => Temperaturvoreinstellung unbekannt / nicht ermittelbar  | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4853879 \"BT Nord, EG, Fujitsu, Umkleide, DU links (PWH)\""
+                    }
+                },
+                {
+                    "id": 4853880,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Nord, Fujitsu, Umkleide, DU 2. v. rechts (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke => Temperaturvoreinstellung unbekannt / nicht ermittelbar  | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4854951 \"BT Nord, EG, Fujitsu, Umkleide, DU rechts (PWH)\""
+                    }
+                },
+                {
+                    "id": 4853879,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Nord, Fujitsu, Umkleide, DU links (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke => Temperaturvoreinstellung unbekannt / nicht ermittelbar  | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4854945 \"BT Nord, EG, Fujitsu, Umkleide, DU 2. v. links (PWH)\""
+                    }
+                },
+                {
+                    "id": 4854951,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Nord, Fujitsu, Umkleide, DU rechts (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke => Temperaturvoreinstellung unbekannt / nicht ermittelbar  | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch)",
+                        "710104": "0",
+                        "710105": "4",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit benachbarter Dusche: MP-ID 4853880 \"BT Nord, EG, Fujitsu, Umkleide, DU 2. v. rechts (PWH)\""
+                    }
+                },
+                {
+                    "id": 4853874,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Ost, Barrierefreies WC (neben FitYou), WB (PWC)",
+                        "710102": "110001",
+                        "710103": "Sensorarmatur",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853877,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Südwest, FitYou, Umkleide Damen, WB  (PWH)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "ACHTUNG: farbig/schwarz abgesetzte Armatur (Steinberg)=> chemisch desinfizieren!"
+                    }
+                },
+                {
+                    "id": 4853878,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Südwest, FitYou, Umkleide Damen, WB (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "ACHTUNG: farbig/schwarz abgesetzte Armatur (Steinberg)=> chemisch desinfizieren!"
+                    }
+                },
+                {
+                    "id": 4853875,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Südwest, FitYou, Umkleide Herren, WB  (PWH)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "ACHTUNG: farbig/schwarz abgesetzte Armatur (Steinberg)=> chemisch desinfizieren!"
+                    }
+                },
+                {
+                    "id": 4853876,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT Südwest, FitYou, Umkleide Herren, WB (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "ACHTUNG: farbig/schwarz abgesetzte Armatur (Steinberg)=> chemisch desinfizieren!"
+                    }
+                },
+                {
+                    "id": 4853873,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT West, KiTa, Gäste-WC / barrierefreies WC, WB (PWC)",
+                        "710102": "110001",
+                        "710103": "Sensorarmatur",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853871,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT West, KiTa, Küche, SP  (PWC-Ch)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853870,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT West, KiTa, Sanitärraum gegenüber Lager, Reihen-WB, EHMB rechts (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "ACHTUNG: farbig abgesetzte Armatur=> chemisch desinfizieren!"
+                    }
+                },
+                {
+                    "id": 4853872,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "EG, BT West, KiTa, Wickelraum neben Küche, DU (PWH)",
+                        "710102": "110001",
+                        "710103": "Zapfstellenprobe nach Kundenvorgabe | \r\ndezentrale TWEA mit ELT-Durchlauf-WEW in Zwischendecke => Temperaturvoreinstellung unbekannt / nicht ermittelbar  | \r\nPN an Armatur / Anschluss Brauseschlauch (ohne Schlauch) | \r\nAP-Thermostatarmatur",
+                        "710104": "0",
+                        "710105": "4"
+                    }
+                },
+                {
+                    "id": 4853864,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Nordost, Infineon, Teeküche A.4.42, SP  (PWC-Ch)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit Schwermetallprobe an MP-ID 4853862 \"OG 04, BT Südwest, Infineon, Teeküche A.4.57, SP (PWC)\""
+                    }
+                },
+                {
+                    "id": 4853865,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Nordost, Infineon, Teeküche A.4.42, SP (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853866,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Nordwest, Infineon, WC-Herren A.4.67/68, SP (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853863,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Südost, Infineon, WC-Herren A.4.48/49, SP (PWC)",
+                        "710102": "110001",
+                        "710103": "Sensorarmatur",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                },
+                {
+                    "id": 4853861,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Südwest, Infineon, Teeküche A.4.57, SP  (PWC-Ch)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3",
+                        "710106": "PN an diesem Messpunkt turnusmäßig abwechselnd mit Schwermetallprobe an MP-ID 4853864 \"OG 04, BT Nordost, Infineon, Teeküche A.4.42, SP (PWC-Ch)\""
+                    }
+                },
+                {
+                    "id": 4853862,
+                    "sys": 1,
+                    "attribute": {
+                        "710101": "OG 04, BT Südwest, Infineon, Teeküche A.4.57, SP (PWC)",
+                        "710102": "110001",
+                        "710104": "0",
+                        "710105": "3"
+                    }
+                }
+            ]
+        }
+    },
+    "probenahmen": [
+        {
+            "id": 4853627,
+            "mdv": "A905A41C349860AD00001108",
+            "oklasse": 7121,
+            "status": 100711,
+            "porg": "domatec GmbH",
+            "labor": "domatec",
+            "probenehmer": "Kittel André; andre.kittel@domatec.info",
+            "uklasse": 110001,
+            "objekt": 4720790,
+            "vorort_probe_parameter": 132436,
+            "fixe_messpunkte": 1,
+            "wl": {
+                "710104": [
+                    {
+                        "id": 111714,
+                        "bez": "Hochrisikobereich"
+                    }
+                ]
+            },
+            "aufgaben": [
+                {
+                    "id": 4853629,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 0,
+                    "bezeichnung": "Allgemeine Vor-Ort-Parameter",
+                    "vorort_parameter": 132451,
+                    "nr": "",
+                    "datum": "",
+                    "attribute": {}
+                }
+            ],
+            "attribute": {
+                "712101": "02.11.2022",
+                "712103": "2436897",
+                "712105": "100109",
+                "712110": "113401",
+                "712121": "11:00",
+                "712123": "0",
+                "712130": "alle Legionellenuntersuchungen auf Kundenanforderung und als Zapfstellenproben, da jeweils dezentrale TWEA mit ELT-DWEW",
+                "712146": "2221539",
+                "712148": "Kundenbeauftragung per eMail v. 06.09.2022 GB Hr. Thies",
+                "712192": "100663"
+            }
+        },
+        {
+            "id": 4873405,
+            "mdv": "A905A41C349860AD00001108",
+            "oklasse": 7121,
+            "status": 100702,
+            "porg": "domatec GmbH",
+            "labor": "domatec",
+            "probenehmer": "Kittel André; andre.kittel@domatec.info",
+            "uklasse": 110001,
+            "objekt": 152119,
+            "vorort_probe_parameter": 132436,
+            "fixe_messpunkte": 1,
+            "wl": {
+                "710104": [
+                    {
+                        "id": 111714,
+                        "bez": "Hochrisikobereich",
+                        "$$hashKey": "object:334"
+                    }
+                ]
+            },
+            "aufgaben": [
+                {
+                    "id": 4873407,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 0,
+                    "bezeichnung": "Allgemeine Vor-Ort-Parameter",
+                    "vorort_parameter": 132451,
+                    "nr": "",
+                    "datum": "",
+                    "attribute": {
+                        "713101": "7,46",
+                        "713102": "581",
+                        "713103": "20,8",
+                        "713104": 167009,
+                        "713105": 3,
+                        "713106": 4,
+                        "713118": 3
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873409,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Eintritt [wU/NU] EH (TWK)",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 951131,
+                    "nr": "1",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716117": "Adapter",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161109": 114301,
+                        "7161110": 114401,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "08:28",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873410,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Austritt TWE PH",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167000,
+                    "nr": "2",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "62,1",
+                        "716113": "62,1",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114204,
+                        "7161109": 114301,
+                        "7161110": 114404,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "08:32",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873411,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 3/West Zirkulation TWZ PH",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 166998,
+                    "nr": "3",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "56,1",
+                        "716113": "56,1",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114203,
+                        "7161109": 114301,
+                        "7161110": 114404,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "08:53",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873412,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Eintritt [wu/NU] EH (TWK)",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348453,
+                    "nr": "4",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716117": "Adapter",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161110": 114401,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "08:41",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873413,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Austritt TWE PH",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 490562,
+                    "nr": "5",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "61,6",
+                        "716113": "61,6",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114204,
+                        "7161109": 114301,
+                        "7161110": 114404,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "08:45",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873414,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "1. UG1.056 Zentrale Garmischer Str. Boiler 4/West Zirkulation TWZ PH",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 166999,
+                    "nr": "6",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "56,7",
+                        "716113": "56,7",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114203,
+                        "7161109": 114301,
+                        "7161110": 114404,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:49",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873416,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.077 Küche Armatur Spüle TWK",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167009,
+                    "nr": "7",
+                    "datum": "09.11.2022 19:11",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "20,8",
+                        "716113": "13,3",
+                        "716120": "10",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:31",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873417,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 Raum 2.075 (links neben 2.077 Küche Spüle) Bad WB (Sensorarmatur) TWK [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348513,
+                    "nr": "8",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "21,2",
+                        "716113": "13,5",
+                        "716120": "19",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:25",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873418,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 Raum 2.079 (rechts neben 2.077 KücheSpüle) Bad WB TWK [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348514,
+                    "nr": "9",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "26,2",
+                        "716113": "13,8",
+                        "716117": "Armaturenauslauf mit Sterilfilter",
+                        "716120": "25",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:36",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873419,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Raum 3.065 (über 2.077 Küche Spüle) Personalwhg. Bad WB WB TWK [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348515,
+                    "nr": "10",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "17,8",
+                        "716113": "13,2",
+                        "716120": "10",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:29",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873420,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West PN-Stelle (unter 2.077 Küche Armatur) TWK [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 4531146,
+                    "nr": "11",
+                    "datum": "09.11.2022 19:11",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "19,4",
+                        "716113": "13,8",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114201,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:43",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873426,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Personalappartment 4 Raum 3.038 (über 2.038 Pflegebad WB) WB TWW Bad [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348504,
+                    "nr": "13",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "32,4",
+                        "716113": "58,2",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:20",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873427,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.036 Personaldusche Damen Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167029,
+                    "nr": "14",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "45,2",
+                        "716113": "58,5",
+                        "716120": "16",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:31",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873428,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.059 Personalwhg. (ehem. Besprechung) Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167025,
+                    "nr": "15",
+                    "datum": "09.11.2022 19:11",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "38,6",
+                        "716113": "58,3",
+                        "716120": "22",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "11:58",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873429,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.061 Küche Armatur Spüle TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 877439,
+                    "nr": "16",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "44,3",
+                        "716113": "57,7",
+                        "716120": "16",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "11:38",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873430,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.063 Personaldusche Herren Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3384224,
+                    "nr": "17",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "3",
+                        "716112": "25,9",
+                        "716113": "46,7",
+                        "716117": "Eckventil TWK bei PN zugedreht | \nAblauf bis PN: 3l\nAbbruch Konstanttemperaturmessung nach 30l + 46.7 °C",
+                        "716120": "30",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:55",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873431,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West Raum 2.031 Zahnarzt WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3953861,
+                    "nr": "18",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873432,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West Raum 2.045 Damen-/ barrierefreies WC WB TWW [wU/NU]",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 3348494,
+                    "nr": "19",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873433,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB02 1.001 Küche Armatur Spüle TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167030,
+                    "nr": "20",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "53,7",
+                        "716113": "58,9",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 4,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:53",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873434,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB02 1.002 Bad Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167002,
+                    "nr": "21",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873435,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB03 1.038 Bad Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167006,
+                    "nr": "22",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873436,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.038 Pflegebad Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167010,
+                    "nr": "23",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "44,5",
+                        "716113": "58,1",
+                        "716117": "Armaturenauslauf m. Sterilfilter",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:15",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873437,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.067 Bewohnerbad Verbrühschutzarmatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167011,
+                    "nr": "24",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873438,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.067 Bewohnerbad WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 4531144,
+                    "nr": "25",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873439,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.075 Pflegebad  WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 4531145,
+                    "nr": "26",
+                    "datum": "",
+                    "attribute": {
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873440,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 2.075 Pflegebad Verbrühschutzarmatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167012,
+                    "nr": "27",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716117": "Armaturenauslauf mit Sterilfilter",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:20",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873441,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB06 Pflegebad 2.036 WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 2274896,
+                    "nr": "28",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "48,2",
+                        "716113": "57,6",
+                        "716117": "Armaturenauslauf Sterilfilter",
+                        "716120": "10",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114301,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "10:09",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873442,
+                    "sys": 1,
+                    "status": 2,
+                    "wf_status": 3,
+                    "erledigt": 0,
+                    "probe": 1,
+                    "bezeichnung": "West WB07 2.096 Stationsbad Verbrühschutzarmatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167018,
+                    "nr": "29",
+                    "datum": "09.11.2022 19:11",
+                    "attribute": {
+                        "716107": "1",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "id": 4873443,
+                    "sys": 1,
+                    "status": 1,
+                    "wf_status": 3,
+                    "erledigt": 1,
+                    "probe": 1,
+                    "bezeichnung": "West WB08 Raum 3.023 Bewohnerbad Armatur WB TWW",
+                    "vorort_parameter": 132436,
+                    "messpunkt": 167022,
+                    "nr": "30",
+                    "datum": "",
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "40,6",
+                        "716113": "57,9",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:25",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10001,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "48,9",
+                        "716113": "58,6",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:36",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 31,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10002,
+                    "bezeichnung": "West Tagespflege (ehem. WB09) 3.035 Gemeinschaftsraum Wohngruppe SP TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10003,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "38,2",
+                        "716113": "57,8",
+                        "716117": "Ext. Verbrühschutz zur PN aufgedreht + TWK Eckventil zugedreht",
+                        "716120": "19",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:41",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 32,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10004,
+                    "bezeichnung": "West Tagespflege (ehem. WB09) 3.033 WC Damen/ Herren Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10005,
+                    "neu": 1,
+                    "attribute": {
+                        "716117": "Keine Probenahme möglich, da keine qualifizierte PN-Stelle vorhanden (Armatur m. Anbauten etc.)=> PH als PN-Eckventil nachrüsten.",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 4,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:47",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 33,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10006,
+                    "bezeichnung": "West Tagespflege (ehem. WB09) 3.031 Barrierefreies WC Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10007,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "52,9",
+                        "716113": "58,1",
+                        "716120": "19",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "09:50",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 34,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": 3348493,
+                    "bezeichnung": "West WB08 Raum 3.025 (rechts neben 3.023 Bewohnerbad WB) Küche SP TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10008,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "27,7",
+                        "716113": "57,4",
+                        "716120": "22",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:58",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 35,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10009,
+                    "bezeichnung": "WB 08 R3.001"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10010,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "33",
+                        "716113": "57,2",
+                        "716120": "22",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "11:46",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 36,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10011,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.056 Personalwhg. Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10012,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "3",
+                        "716112": "30,4",
+                        "716113": "57,2",
+                        "716117": "Ablauf 3l bis PN wegen rostbraunem Wasser",
+                        "716120": "25",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "11:51",
+                        "7161116": 4,
+                        "7161117": 3
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 37,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10013,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.05 Personalwhg. Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10014,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "43",
+                        "716113": "58,4",
+                        "716120": "16",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:04",
+                        "7161116": 4,
+                        "7161117": 3
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 38,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10015,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.050 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10016,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "27,3",
+                        "716113": "58,2",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:09",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 39,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10017,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.055 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10018,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "31,3",
+                        "716113": "58,1",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:15",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 40,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10019,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.051 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10020,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "40",
+                        "716113": "58,6",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:24",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 41,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10021,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.045 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10022,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "42,7",
+                        "716113": "58,9",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:34",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 42,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10023,
+                    "bezeichnung": "West Personalbereich (ehem. WB09) 3.066 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10024,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "38,6",
+                        "716113": "59",
+                        "716120": "10",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:39",
+                        "7161116": 4,
+                        "7161117": 3
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 43,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10025,
+                    "bezeichnung": "West Personalbereich 3.073 Personalwhg. Armatur WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10026,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "30,7",
+                        "716113": "58,9",
+                        "716120": "10",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:45",
+                        "7161116": 3,
+                        "7161117": 3
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 44,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10027,
+                    "bezeichnung": "West Personalbereich 3.072 (bei TRH 5) Personalwhg. Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10028,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "30,8",
+                        "716113": "58,4",
+                        "716117": "Rostbraunes Wasser bei Ablauf Konstanttemperaturmessung",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "12:49",
+                        "7161116": 3,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 45,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10029,
+                    "bezeichnung": "West Personalbereich 3.081 Personalwhg. Armatur WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10030,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "39,8",
+                        "716113": "56,9",
+                        "716120": "16",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:04",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 46,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10031,
+                    "bezeichnung": "West WB08 R3.004 Bewohnerbad WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10032,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "33,2",
+                        "716113": "57,2",
+                        "716117": "Rotbraunes Wasser bei Ablauf bis Konstanttemperaturmessung",
+                        "716120": "16",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:13",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 47,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10033,
+                    "bezeichnung": "West WB08 Raum 3.017 Bewohnerbad WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10034,
+                    "neu": 1,
+                    "attribute": {
+                        "716117": "Keine PN möglich, da kein Zugang",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 4,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:18",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 48,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10035,
+                    "bezeichnung": "West WB08 Raum 3.021 Bewohnerbad WB TWW"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10036,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "43,5",
+                        "716113": "58,2",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:20",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 49,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10037,
+                    "bezeichnung": "West WB08 Raum 3.021 Bewohnerbad WB TWW [wU/NU]"
+                },
+                {
+                    "o_status": 1,
+                    "o_datum": "10.11.2022 16:37:17",
+                    "id": -10038,
+                    "neu": 1,
+                    "attribute": {
+                        "716107": "1",
+                        "716112": "41,8",
+                        "716113": "58,3",
+                        "716120": "13",
+                        "716157": 4,
+                        "716166": 4,
+                        "716167": 4,
+                        "716168": 4,
+                        "716169": 4,
+                        "716191": 4,
+                        "7161103": 3,
+                        "7161104": 114102,
+                        "7161107": 4,
+                        "7161108": 114202,
+                        "7161109": 114302,
+                        "7161110": 114402,
+                        "7161111": 4,
+                        "7161112": 4,
+                        "7161113": 4,
+                        "7161114": "13:30",
+                        "7161116": 4,
+                        "7161117": 4
+                    },
+                    "erledigt": 1,
+                    "status": 1,
+                    "nr": 50,
+                    "vorort_parameter": 132436,
+                    "sys": 0,
+                    "probe": 1,
+                    "messpunkt": -10039,
+                    "bezeichnung": "West WB08 Raum 3.020 Bewohnerbad Armatur WB TWW"
+                }
+            ],
+            "attribute": {
+                "712101": "10.11.2022",
+                "712103": "2436897",
+                "712105": "100104",
+                "712110": "113401",
+                "712120": "ersetzt ursprünglich am 20.10.2022 angelegte PN Aquadoc-ID 4824744",
+                "712121": "08:00",
+                "712123": "0",
+                "712130": "Nachuntersuchung zu \r\n - TMW-Überschreitung lt. Prüfbericht EB3468280 m. Probenahme am 02.12.2021 | \r\n\r\nProbenahmen und Legionellen-Nachuntersuchung erfolgen nach Vorgabe und auf\r\nausdrücklichen Kundenwunsch der APLEONA HSG Südost GmbH dahingehend, \r\ndass nur die Trinkwarmwasseranlage/-Verteilung Westbau im Münchenstift Haus St. Josef \r\nhinsichtlich Legionellen untersucht werden soll. \r\nEs ist nicht bekannt, in wie weit eine Abklärung der Probeentnahmestellen und Untersuchungsparameter \r\nzwischen APLEONA Südost GmbH, Münchenstift GmbH und dem zuständigen Gesundheitsamt erfolgte.",
+                "712146": "2221804",
+                "712148": "Bestellung-Nr.: B2209116217 Kostenträger KTR 0915/10180 Arbeitsauftrag Nr. A220910030801",
+                "712192": "100663"
+            },
+            "o_status": 1,
+            "o_datum": "10.11.2022 16:37:17",
+            "probenahme_abgeschlossen": 1
+        }
+    ],
+    "at": {
+        "708101": {
+            "bezeichnung": "Objekt",
+            "hinweis": "Kurzbezeichnung",
+            "mussfeld": 1,
+            "type": "text",
+            "art": 5
+        },
+        "708102": {
+            "bezeichnung": "Anschrift1",
+            "type": "text",
+            "art": 5
+        },
+        "708103": {
+            "bezeichnung": "Anschrift2",
+            "type": "text",
+            "art": 5
+        },
+        "708104": {
+            "bezeichnung": "Straße",
+            "type": "text",
+            "art": 5
+        },
+        "708105": {
+            "bezeichnung": "PLZ",
+            "laenge_max": 10,
+            "laenge_anz": 10,
+            "type": "text",
+            "art": 5
+        },
+        "708106": {
+            "bezeichnung": "Ort",
+            "type": "text",
+            "art": 5
+        },
+        "708107": {
+            "bezeichnung": "zuständiges Gesundheitsamt",
+            "hinweis": "evtl. \"Unbekannt\" auswählen",
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "708108": {
+            "bezeichnung": "zuständiges Gesundheitsamt",
+            "type": "text",
+            "art": 5
+        },
+        "708109": {
+            "bezeichnung": "Bemerkungen",
+            "hinweis": "erscheint nicht auf Prüfbericht",
+            "type": "textarea",
+            "art": 6
+        },
+        "708111": {
+            "bezeichnung": "Ansprechpartner",
+            "hinweis": "Anrede/Vorname/Nachname",
+            "type": "text",
+            "art": 5
+        },
+        "708112": {
+            "bezeichnung": "Telefon",
+            "type": "text",
+            "art": 5
+        },
+        "708113": {
+            "bezeichnung": "E-Mail",
+            "hinweis": "optional",
+            "type": "text",
+            "art": 5
+        },
+        "708115": {
+            "bezeichnung": "Objektart",
+            "wl": 1126,
+            "type": "select",
+            "art": 9
+        },
+        "708116": {
+            "bezeichnung": "Sonstige Objektart",
+            "type": "text",
+            "art": 5
+        },
+        "708117": {
+            "bezeichnung": "Betreiber",
+            "type": "text",
+            "art": 5
+        },
+        "708118": {
+            "bezeichnung": "Bemerkungen zum Ansprechpartner",
+            "hinweis": "erscheint nicht auf Prüfbericht",
+            "type": "textarea",
+            "art": 6
+        },
+        "708119": {
+            "bezeichnung": "Beschreibung",
+            "hinweis": "erscheint auf Prüfbericht",
+            "type": "textarea",
+            "art": 6
+        },
+        "708120": {
+            "bezeichnung": "E-Mail Ansprechpartner",
+            "hinweis": "optional",
+            "type": "text",
+            "art": 5
+        },
+        "708141": {
+            "bezeichnung": "Kostenstellennummer",
+            "type": "text",
+            "art": 5
+        },
+        "708162": {
+            "bezeichnung": "Gemeinde-Nummer",
+            "hinweis": "6 Stellen",
+            "minimum": 6,
+            "maximum": 6,
+            "laenge_max": 6,
+            "laenge_anz": 10,
+            "type": "text",
+            "art": 5
+        },
+        "708163": {
+            "bezeichnung": "Teilgemeinde-Nummer",
+            "hinweis": "2 oder 4 Stellen",
+            "minimum": 2,
+            "maximum": 4,
+            "laenge_max": 4,
+            "laenge_anz": 10,
+            "type": "text",
+            "art": 5
+        },
+        "710101": {
+            "bezeichnung": "Stockwerk/Raum/Entnahmestelle",
+            "hinweis": "Auf Hierarchie achten!",
+            "mussfeld": 1,
+            "type": "text",
+            "art": 5
+        },
+        "710102": {
+            "bezeichnung": "Untersuchungsklasse",
+            "mussfeld": 1,
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "710103": {
+            "bezeichnung": "Beschreibung",
+            "hinweis": "Zustand, Zugang (optional, erscheint nur im Probenahmeprotokoll)",
+            "type": "textarea",
+            "art": 6
+        },
+        "710104": {
+            "bezeichnung": "Klassifizierung des Messpunktes",
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "710105": {
+            "bezeichnung": "Standard Messstelle",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "710106": {
+            "bezeichnung": "Anmerkung",
+            "hinweis": "optional, erscheint im Probenahmeprotokoll und Prüfbericht, falls Probentabelle angezeigt wird",
+            "type": "textarea",
+            "art": 6
+        },
+        "712101": {
+            "bezeichnung": "Datum Probenahme",
+            "format": "DD.MM.YYYY",
+            "defaultwert": "0",
+            "mussfeld": 1,
+            "type": "date",
+            "art": 7
+        },
+        "712103": {
+            "bezeichnung": "Probenehmer",
+            "mussfeld": 1,
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "712105": {
+            "bezeichnung": "Untersuchungstyp",
+            "mussfeld": 1,
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "712108": {
+            "bezeichnung": "Fahrstrecke",
+            "type": "text",
+            "art": 5
+        },
+        "712109": {
+            "bezeichnung": "Anzahl km",
+            "type": "number",
+            "art": 8
+        },
+        "712110": {
+            "bezeichnung": "Meldung an Gesundheitsamt durch Labor",
+            "defaultwert": "113401",
+            "mussfeld": 1,
+            "wl": 1134,
+            "type": "select",
+            "art": 9
+        },
+        "712118": {
+            "bezeichnung": "Anzahl Proben",
+            "type": "number",
+            "art": 8
+        },
+        "712119": {
+            "bezeichnung": "Zeitaufwand",
+            "einheit": "Std.",
+            "type": "number",
+            "art": 8
+        },
+        "712120": {
+            "bezeichnung": "Bemerkung",
+            "hinweis": "erscheint nicht im Prüfbericht",
+            "type": "textarea",
+            "art": 6
+        },
+        "712121": {
+            "bezeichnung": "Uhrzeit",
+            "hinweis": "hh24:min",
+            "defaultwert": "00:00",
+            "mussfeld": 1,
+            "laenge_max": 5,
+            "laenge_anz": 5,
+            "type": "time",
+            "art": 5
+        },
+        "712122": {
+            "bezeichnung": "Probenahme bis",
+            "hinweis": "hh24:min, optional",
+            "defaultwert": "00:00",
+            "laenge_max": 5,
+            "laenge_anz": 5,
+            "type": "time",
+            "art": 5
+        },
+        "712123": {
+            "bezeichnung": "Akkreditierung",
+            "wl": 1127,
+            "type": "select",
+            "art": 9
+        },
+        "712130": {
+            "bezeichnung": "Anmerkung",
+            "hinweis": "erscheint auch im Prüfbericht",
+            "type": "textarea",
+            "art": 6
+        },
+        "712145": {
+            "bezeichnung": "Angebotsnummer",
+            "type": "text",
+            "art": 5
+        },
+        "712146": {
+            "bezeichnung": "Auftragsbestätigungsnummer",
+            "type": "text",
+            "art": 5
+        },
+        "712147": {
+            "bezeichnung": "Lieferscheinnummer",
+            "type": "text",
+            "art": 5
+        },
+        "712148": {
+            "bezeichnung": "Externe Auftragsnummer",
+            "type": "text",
+            "art": 5
+        },
+        "712149": {
+            "bezeichnung": "Kommissionsnummer / Kostenträger",
+            "type": "text",
+            "art": 5
+        },
+        "712192": {
+            "bezeichnung": "zugeordnet",
+            "mussfeld": 1,
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "713101": {
+            "bezeichnung": "ph-Wert",
+            "format": "0D9",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "713102": {
+            "bezeichnung": "elektrische Leitfähigkeit",
+            "einheit": "µS/cm",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "713103": {
+            "bezeichnung": "bei Temperatur",
+            "einheit": "°C",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "713104": {
+            "bezeichnung": "an Messpunkt",
+            "wl": 0,
+            "type": "select",
+            "art": 9
+        },
+        "713105": {
+            "bezeichnung": "Abweichung, Ergänzung oder Ausschlüsse nach DIN EN ISO / IEC 17025",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "713106": {
+            "bezeichnung": "Inbetriebnahme (VDI 6023)",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "713118": {
+            "bezeichnung": "Der Probenehmer bestätigt für diesen Untersuchungsauftrag seine Unabhängigkeit und Unparteilichkeit.",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716101": {
+            "bezeichnung": "Probenart",
+            "type": "title",
+            "art": 1
+        },
+        "716107": {
+            "bezeichnung": "Ablaufmenge bis Probenahme",
+            "hinweis": "Liter",
+            "einheit": "l",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "716111": {
+            "bezeichnung": "Probenahmeparameter",
+            "type": "title",
+            "art": 1
+        },
+        "716112": {
+            "bezeichnung": "Entnahmetemperatur",
+            "format": "90D0",
+            "einheit": "°C",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "716113": {
+            "bezeichnung": "Konstante Temperatur",
+            "format": "90D0",
+            "einheit": "°C",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "716117": {
+            "bezeichnung": "Bemerkung",
+            "hinweis": "Geruch, Färbung, Trübung",
+            "type": "textarea",
+            "art": 6
+        },
+        "716120": {
+            "bezeichnung": "Ablaufmenge bis zur konst. Temp.",
+            "hinweis": "Liter",
+            "einheit": "l",
+            "laenge_anz": 5,
+            "type": "number",
+            "art": 8
+        },
+        "716149": {
+            "bezeichnung": "Vom Labor zu untersuchende Parameter",
+            "type": "title",
+            "art": 1
+        },
+        "716157": {
+            "bezeichnung": "Pseudomonas aeruginosa",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716166": {
+            "bezeichnung": "Blei",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716167": {
+            "bezeichnung": "Kupfer",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716168": {
+            "bezeichnung": "Nickel",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716169": {
+            "bezeichnung": "Eisen",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716191": {
+            "bezeichnung": "Weitere chemische Parameter",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "716198": {
+            "bezeichnung": "Angaben zum Auftragsumfang",
+            "hinweis": "Informationen ans Labor",
+            "type": "textarea",
+            "art": 6
+        },
+        "7161103": {
+            "bezeichnung": "Legionella gesamt",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161104": {
+            "bezeichnung": "Mikrobiologie Probenahmezweck",
+            "hinweis": "a, b, c",
+            "wl": 1141,
+            "type": "select",
+            "art": 9
+        },
+        "7161105": {
+            "bezeichnung": "Probenverfahren Chemie",
+            "hinweis": "Z, S0, S1, S2",
+            "wl": 1140,
+            "type": "select",
+            "art": 9
+        },
+        "7161107": {
+            "bezeichnung": "Cadmium",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161108": {
+            "bezeichnung": "TWK/TWW/TWZ/TWE",
+            "hinweis": "K, W, Z, E",
+            "wl": 1142,
+            "type": "select",
+            "art": 9
+        },
+        "7161109": {
+            "bezeichnung": "Desinfektion",
+            "hinweis": "c=chemisch, t=thermisch",
+            "wl": 1143,
+            "type": "select",
+            "art": 9
+        },
+        "7161110": {
+            "bezeichnung": "Anbauteile",
+            "hinweis": "m=mit, o=ohne, PH=Probenahmehahn",
+            "wl": 1144,
+            "type": "select",
+            "art": 9
+        },
+        "7161111": {
+            "bezeichnung": "Gesamtkoloniezahl (22°C / 36°C)",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161112": {
+            "bezeichnung": "Coliforme Bakterien (CF / EC)",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161113": {
+            "bezeichnung": "Intestinale Enterokokken",
+            "mussfeld": 1,
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161114": {
+            "bezeichnung": "Uhrzeit",
+            "hinweis": "hh:mm",
+            "defaultwert": "00:00",
+            "laenge_max": 5,
+            "laenge_anz": 5,
+            "type": "time",
+            "art": 5
+        },
+        "7161116": {
+            "bezeichnung": "entfernteste Entnahmestelle",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        },
+        "7161117": {
+            "bezeichnung": "Leerstand",
+            "hinweis": "4 Wo. ohne Betrieb",
+            "wl": 3,
+            "type": "checkbox",
+            "art": 9
+        }
+    },
+    "wl": {
+        "3": [
+            {
+                "id": 3,
+                "bez": "ja",
+                "kbez": "J",
+                "md": 0
+            },
+            {
+                "id": 4,
+                "bez": "nein",
+                "kbez": "N",
+                "md": 0
+            }
+        ],
+        "1007": [
+            {
+                "id": 100701,
+                "bez": "Probenahme angelegt",
+                "kbez": "angelegt",
+                "md": 0
+            },
+            {
+                "id": 100702,
+                "bez": "Probenahme abgeschlossen",
+                "kbez": "PNa abg.",
+                "md": 0
+            },
+            {
+                "id": 100703,
+                "bez": "Laboreingang",
+                "kbez": "Laboreing.",
+                "md": 0
+            },
+            {
+                "id": 100704,
+                "bez": "Labor abgeschlossen",
+                "kbez": "Labor abg.",
+                "md": 0
+            },
+            {
+                "id": 100705,
+                "bez": "Prüfbericht erstellt",
+                "kbez": "PB erst.",
+                "md": 0
+            },
+            {
+                "id": 100706,
+                "bez": "Prüfbericht versendet",
+                "kbez": "PB vers.",
+                "md": 0
+            },
+            {
+                "id": 100707,
+                "bez": "Probennahme fakturiert",
+                "kbez": "fakturiert",
+                "md": 0
+            },
+            {
+                "id": 100708,
+                "bez": "Rechnung versendet",
+                "kbez": "RE vers.",
+                "md": 0
+            },
+            {
+                "id": 100709,
+                "bez": "Lieferschein",
+                "kbez": "LS",
+                "md": 0
+            },
+            {
+                "id": 100710,
+                "bez": "Lieferschein versendet",
+                "kbez": "LS vers.",
+                "md": 0
+            },
+            {
+                "id": 100711,
+                "bez": "Offline Probenahme",
+                "kbez": "PNa offl.",
+                "md": 0
+            }
+        ],
+        "1100": [
+            {
+                "id": 110035,
+                "bez": "HNO-Einheiten",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110036,
+                "bez": "Hygiene bei Spül- und Waschmaschinen",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110037,
+                "bez": "Desinfektionsautomaten",
+                "md": "9D14BF9AF91A0D9C000011AB"
+            },
+            {
+                "id": 110038,
+                "bez": "Dialysatprobe / Permeatprobe",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110039,
+                "bez": "Osmosewasser",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110040,
+                "bez": "Trinkwasser Österreich",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110001,
+                "bez": "Trinkwasser",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110005,
+                "bez": "Luftkeimbelastung",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110006,
+                "bez": "Blutprodukte",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110007,
+                "bez": "Prozesssimulation Apotheke",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110008,
+                "bez": "Medikamentenherstellung",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110009,
+                "bez": "Dampf-Sterilisator",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110010,
+                "bez": "Badewasser",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110020,
+                "bez": "Abstrich allgemein",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110026,
+                "bez": "Luftkeimbelastung - Sedimentation",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110027,
+                "bez": "Luftkeimbelastung - Luftsammlung",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110028,
+                "bez": "Wasserkeimbelastung",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110029,
+                "bez": "RLT Hygieneinspektion",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110030,
+                "bez": "Luftkeimbelastung - Luftsammlung",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110031,
+                "bez": "Schankanlagen",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110032,
+                "bez": "Verdunstungskühlanlagen",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110034,
+                "bez": "Befeuchterwasser",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110011,
+                "bez": "Trinkwasser",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110012,
+                "bez": "Trinkbrunnen",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110013,
+                "bez": "Wasser divers",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110014,
+                "bez": "Beckenwasser",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110015,
+                "bez": "Dentaleinheiten",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110016,
+                "bez": "Endoskope",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110017,
+                "bez": "Keimgehalt",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110018,
+                "bez": "Abklatsch an fixen Messpunkten",
+                "md": "0F02585E4DFF93690000118A"
+            },
+            {
+                "id": 110019,
+                "bez": "Abklatsch allgemein",
+                "md": "B2019867A05BBDBC000011A4"
+            },
+            {
+                "id": 110054,
+                "bez": "DepV DK I, II, III",
+                "md": "7603B4D699581821000011A7"
+            },
+            {
+                "id": 110021,
+                "bez": "Trinkwasser Legionellen",
+                "md": "2B04A4B245354589000011D0"
+            },
+            {
+                "id": 110022,
+                "bez": "Trinkwasser Mikrobiologie",
+                "md": "2B04A4B245354589000011D0"
+            },
+            {
+                "id": 110024,
+                "bez": "Trinkwasser Mikrobiologie",
+                "md": "A905A41C349860AD00001108"
+            },
+            {
+                "id": 110025,
+                "bez": "Trinkwasser Chemie",
+                "md": "A905A41C349860AD00001108"
+            },
+            {
+                "id": 110023,
+                "bez": "Trinkwasser",
+                "md": "E6061E9C28E23502000011E9"
+            },
+            {
+                "id": 110033,
+                "bez": "Rohwasser",
+                "md": "E810397A443BA98500001195"
+            }
+        ],
+        "1126": [
+            {
+                "id": 112663,
+                "bez": "Apotheke",
+                "md": 0
+            },
+            {
+                "id": 112616,
+                "bez": "Apotheke in Krankenhaus",
+                "md": 0
+            },
+            {
+                "id": 112661,
+                "bez": "Arztpraxis",
+                "md": 0
+            },
+            {
+                "id": 112673,
+                "bez": "Bäckerei",
+                "md": 0
+            },
+            {
+                "id": 112672,
+                "bez": "Bar / Café",
+                "md": 0
+            },
+            {
+                "id": 112682,
+                "bez": "Bauplatz",
+                "md": 0
+            },
+            {
+                "id": 112651,
+                "bez": "Dampfsterilisator",
+                "md": 0
+            },
+            {
+                "id": 112681,
+                "bez": "Deponie",
+                "md": 0
+            },
+            {
+                "id": 112652,
+                "bez": "Endoskop",
+                "md": 0
+            },
+            {
+                "id": 112674,
+                "bez": "Fleischerei",
+                "md": 0
+            },
+            {
+                "id": 112684,
+                "bez": "Fluss",
+                "md": 0
+            },
+            {
+                "id": 112642,
+                "bez": "Freibad",
+                "md": 0
+            },
+            {
+                "id": 112683,
+                "bez": "Grundstück",
+                "md": 0
+            },
+            {
+                "id": 112643,
+                "bez": "Hallenbad",
+                "md": 0
+            },
+            {
+                "id": 112613,
+                "bez": "Heim",
+                "md": 0
+            },
+            {
+                "id": 112664,
+                "bez": "Hotel",
+                "md": 0
+            },
+            {
+                "id": 112612,
+                "bez": "Kindergarten",
+                "md": 0
+            },
+            {
+                "id": 112614,
+                "bez": "Krankenhaus",
+                "md": 0
+            },
+            {
+                "id": 112632,
+                "bez": "Neue Netzleitung",
+                "md": 0
+            },
+            {
+                "id": 112644,
+                "bez": "Privates Schwimmbad",
+                "md": 0
+            },
+            {
+                "id": 112671,
+                "bez": "Restaurant",
+                "md": 0
+            },
+            {
+                "id": 112687,
+                "bez": "RLT-Anlage",
+                "md": 0
+            },
+            {
+                "id": 112611,
+                "bez": "Schule",
+                "md": 0
+            },
+            {
+                "id": 112641,
+                "bez": "Schwimmbad",
+                "md": 0
+            },
+            {
+                "id": 112685,
+                "bez": "See",
+                "md": 0
+            },
+            {
+                "id": 112665,
+                "bez": "Seniorenresidenz",
+                "md": 0
+            },
+            {
+                "id": 112601,
+                "bez": "Sonstiges",
+                "md": 0
+            },
+            {
+                "id": 112629,
+                "bez": "Sonstiges öffentliches Gebäude",
+                "md": 0
+            },
+            {
+                "id": 112615,
+                "bez": "Station in Krankenhaus",
+                "md": 0
+            },
+            {
+                "id": 112686,
+                "bez": "Stausee",
+                "md": 0
+            },
+            {
+                "id": 112659,
+                "bez": "Technisches Gerät",
+                "md": 0
+            },
+            {
+                "id": 112631,
+                "bez": "Wohnhaus",
+                "md": 0
+            },
+            {
+                "id": 112662,
+                "bez": "Zahnarztpraxis",
+                "md": 0
+            }
+        ],
+        "1127": [
+            {
+                "id": 112701,
+                "bez": "Probenahme im akkreditierten Bereich",
+                "md": 0
+            },
+            {
+                "id": 112702,
+                "bez": "Probenahme außerhalb des akkreditierten Bereichs",
+                "md": 0
+            },
+            {
+                "id": 112703,
+                "bez": "Proben wurden angeliefert",
+                "md": 0
+            }
+        ],
+        "1134": [
+            {
+                "id": 113401,
+                "bez": "Nein",
+                "md": 0
+            },
+            {
+                "id": 113402,
+                "bez": "Ja",
+                "md": 0
+            },
+            {
+                "id": 113403,
+                "bez": "Nur bei Beanstandung",
+                "md": 0
+            }
+        ],
+        "1140": [
+            {
+                "id": 114001,
+                "bez": "Z-Probe",
+                "kbez": "Z",
+                "md": 0,
+                "$$hashKey": "object:486"
+            },
+            {
+                "id": 114002,
+                "bez": "S0-Probe",
+                "kbez": "S0",
+                "md": 0,
+                "$$hashKey": "object:487"
+            },
+            {
+                "id": 114003,
+                "bez": "S1-Probe",
+                "kbez": "S1",
+                "md": 0,
+                "$$hashKey": "object:488"
+            },
+            {
+                "id": 114004,
+                "bez": "S2-Probe",
+                "kbez": "S2",
+                "md": 0,
+                "$$hashKey": "object:489"
+            }
+        ],
+        "1141": [
+            {
+                "id": 114101,
+                "bez": "a - Hauptverteilung (Versorger)",
+                "kbez": "a",
+                "md": 0,
+                "$$hashKey": "object:453"
+            },
+            {
+                "id": 114102,
+                "bez": "b - Installation / Entnahmearmatur",
+                "kbez": "b",
+                "md": 0,
+                "$$hashKey": "object:454"
+            },
+            {
+                "id": 114103,
+                "bez": "c - Entnahmearmatur ohne Spülung",
+                "kbez": "c",
+                "md": 0,
+                "$$hashKey": "object:455"
+            }
+        ],
+        "1142": [
+            {
+                "id": 114201,
+                "bez": "TWK",
+                "kbez": "K",
+                "md": 0,
+                "$$hashKey": "object:543"
+            },
+            {
+                "id": 114202,
+                "bez": "TWW",
+                "kbez": "W",
+                "md": 0,
+                "$$hashKey": "object:544"
+            },
+            {
+                "id": 114203,
+                "bez": "TWZ",
+                "kbez": "Z",
+                "md": 0,
+                "$$hashKey": "object:545"
+            },
+            {
+                "id": 114204,
+                "bez": "TWE",
+                "kbez": "E",
+                "md": 0,
+                "$$hashKey": "object:546"
+            }
+        ],
+        "1143": [
+            {
+                "id": 114301,
+                "bez": "thermisch",
+                "kbez": "t",
+                "md": 0,
+                "$$hashKey": "object:673"
+            },
+            {
+                "id": 114302,
+                "bez": "chemisch",
+                "kbez": "c",
+                "md": 0,
+                "$$hashKey": "object:674"
+            }
+        ],
+        "1144": [
+            {
+                "id": 114401,
+                "bez": "mit",
+                "kbez": "m",
+                "md": 0,
+                "$$hashKey": "object:701"
+            },
+            {
+                "id": 114402,
+                "bez": "ohne",
+                "kbez": "o",
+                "md": 0,
+                "$$hashKey": "object:702"
+            },
+            {
+                "id": 114404,
+                "bez": "Probenahmehahn",
+                "kbez": "PH",
+                "md": 0,
+                "$$hashKey": "object:703"
+            }
+        ]
+    },
+    "probenahmen_abgl": [
+        {
+            "id": 4779572,
+            "status": "1",
+            "datum": "09.11.2022",
+            "objekt": "GM 4497 Briem",
+            "uklasse": "Trinkwasser",
+            "labor": "domatec",
+            "offline_status": "115603",
+            "mdv": "A905A41C349860AD00001108"
+        },
+        {
+            "id": 4869312,
+            "status": "1",
+            "datum": "09.11.2022",
+            "objekt": "GM 5061 Science Park Ulm",
+            "uklasse": "Trinkwasser",
+            "labor": "domatec",
+            "offline_status": "115603",
+            "mdv": "A905A41C349860AD00001108"
+        },
+        {
+            "id": 4869517,
+            "status": "1",
+            "datum": "09.11.2022",
+            "objekt": "Lise-Meitner-Str. 10",
+            "uklasse": "Trinkwasser",
+            "labor": "domatec",
+            "offline_status": "115603",
+            "mdv": "A905A41C349860AD00001108"
+        }
+    ],
+    "global_id": -10039
+}

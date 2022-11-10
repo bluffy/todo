@@ -4,6 +4,9 @@ import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
 import '../components/note_dialog.dart';
 import 'package:provider/provider.dart';
+import 'package:keybinder/keybinder.dart';
+import 'package:flutter/services.dart';
+import 'package:scroll_to_index/scroll_to_index.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
@@ -14,13 +17,38 @@ class NotesPage extends StatefulWidget {
 
 class _NotesPageState extends State<NotesPage> {
   StreamController<NoteEvents> events =
-      StreamController<NoteEvents>.broadcast();
+      StreamController<NoteEvents>.broadcast(onListen: () {
+    print(
+        "################################################################listen");
+  });
+
+  late AutoScrollController controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    final keybinding = Keybinding.from(
+        {LogicalKeyboardKey.controlLeft, LogicalKeyboardKey.keyS});
+
+    controller = AutoScrollController(
+        viewportBoundaryGetter: () =>
+            Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
+        axis: Axis.vertical);
+    Keybinder.bind(keybinding, saveNote);
+  }
 
   @override
   void dispose() {
     events.close();
+    Keybinder.dispose();
     super.dispose();
   }
+
+//final KeyBindSave = Keybinding({KeyCode.ctrl, KeyCode.from(KeyboardKey) });
+
+  final KeyBindSave = KeyCode.fromSet(
+      {LogicalKeyboardKey.controlLeft, LogicalKeyboardKey.keyS});
 
   //var _isInitialized = false;
   bool isOpen = false;
@@ -42,20 +70,20 @@ class _NotesPageState extends State<NotesPage> {
     });
   }
 
-  void closeDialog() {
+  void closeDialog(String? id) {
     setState(() {
       noteModel = NoteModel();
-      selecedID = "0";
+      selecedID = id.toString();
       isOpen = false;
     });
   }
 
-  Color getColor(id) {
+  Color getColor(BuildContext context, String id) {
     //return setState(() {
 
     // setState(() {
     if (id == selecedID) {
-      return Colors.red;
+      return Theme.of(context).highlightColor;
     }
     return Colors.transparent;
 
@@ -64,114 +92,176 @@ class _NotesPageState extends State<NotesPage> {
     // });
   }
 
+  void saveNote() {
+    events.sink.add(NoteEvents.saveNote);
+  }
+
+  void onKeyToggled(Keybinding keybinding, bool pressed) {
+    print('$keybinding was ${pressed ? 'pressed' : 'released'}');
+  }
+
+  // ItemScrollController _scrollController = ItemScrollController();
+
+  _scrollToindex(i) {}
+
+  Future _scrollToCounter(int index) async {
+    await controller.scrollToIndex(index,
+        preferPosition: AutoScrollPosition.begin);
+    //controller.highlight(index);
+  }
+
   @override
   Widget build(BuildContext context) {
     NotesRepository notesRepository = context.read();
     final notes = notesRepository.searchNotes();
 
     return Scaffold(
-        appBar: AppBar(title: const Text('Notes')),
-        body: SingleChildScrollView(
-            child: Container(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(test),
-                    FutureBuilder<List<NoteSearchResult>>(
-                        future: notes,
-                        builder: (context, future) {
-                          if (!future.hasData) {
-                            return const Text(
-                                ''); // Display empty container if the list is empty
-                          } else {
-                            List<NoteSearchResult>? list = future.data;
-                            if (list != null && list.isNotEmpty) {
-                              return ListView.builder(
-                                  primary: false,
-                                  physics: const NeverScrollableScrollPhysics(),
-                                  padding: EdgeInsets.zero,
-                                  shrinkWrap: true,
-                                  itemCount: list.length,
-                                  itemBuilder: (context, index) {
-                                    if (isOpen && selecedID == list[index].id) {
-                                      return NoteDialog(
-                                        noteEvents: events.stream,
-                                        noteID: list[index].id,
-                                        notesRepository: notesRepository,
-                                        onClose: () {
-                                          closeDialog();
-                                        },
-                                      );
-                                    } else {
-                                      return Row(children: [
-                                        Checkbox(
-                                          onChanged: !isOpen
-                                              ? (bool? value) => {}
-                                              : null,
-                                          value: false,
+        appBar: AppBar(
+          title: const Text('Notes'),
+          actions: <Widget>[
+            Visibility(
+              visible: !isOpen,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: IconButton(
+                  icon: const Icon(Icons.add),
+                  tooltip: "Neue Notiz",
+                  onPressed: () {
+                    openDialog("new");
+                  },
+                ),
+              ),
+            ),
+            Visibility(
+              visible: isOpen,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20.0),
+                child: IconButton(
+                  icon: const Icon(Icons.save),
+                  tooltip: "speichern",
+                  onPressed: () {
+                    events.sink.add(NoteEvents.saveNote);
+                  },
+                ),
+              ),
+            )
+          ],
+        ),
+        body: Container(
+          color: (isOpen) ? Theme.of(context).unselectedWidgetColor : null,
+          padding: const EdgeInsets.all(20),
+          width: double.infinity,
+          height: double.infinity,
+          child: SingleChildScrollView(
+              controller: controller,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Visibility(
+                      visible: isOpen && selecedID == 'new',
+                      child: NoteDialog(
+                        noteEvents: events.stream,
+                        notesRepository: notesRepository,
+                        onClose: (id) {
+                          closeDialog(id);
+                        },
+                      )),
+                  FutureBuilder<List<NoteSearchResult>>(
+                      future: notes,
+                      builder: (context, future) {
+                        if (!future.hasData) {
+                          return const Text(
+                              ''); // Display empty container if the list is empty
+                        } else {
+                          List<NoteSearchResult>? list = future.data;
+                          if (list != null && list.isNotEmpty) {
+                            return ListView.builder(
+                                primary: false,
+                                physics: const NeverScrollableScrollPhysics(),
+                                padding: EdgeInsets.zero,
+                                shrinkWrap: true,
+                                itemCount: list.length,
+                                itemBuilder: (context, index) {
+                                  if (isOpen && selecedID == list[index].id) {
+                                    return NoteDialog(
+                                      noteEvents: events.stream,
+                                      noteID: list[index].id,
+                                      notesRepository: notesRepository,
+                                      onClose: (id) {
+                                        closeDialog(id);
+                                      },
+                                    );
+                                  } else {
+                                    return Row(children: [
+                                      Checkbox(
+                                        onChanged: !isOpen
+                                            ? (bool? value) => {}
+                                            : null,
+                                        value: false,
+                                      ),
+                                      Expanded(
+                                        child: InkWell(
+                                          autofocus: (!isOpen &&
+                                              list[index].id == selecedID),
+                                          onTap: () {
+                                            setState(() {
+                                              if (!isOpen) {
+                                                if (selecedID ==
+                                                    list[index].id) {
+                                                  //   openDialog(list[index].id);
+                                                }
+                                                selecedID = list[index].id;
+                                              } else {
+                                                events.sink
+                                                    .add(NoteEvents.saveNote);
+                                              }
+                                              _scrollToCounter(index);
+                                            });
+                                          },
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(list[index].title),
+                                          ),
                                         ),
-                                        Expanded(
-                                          child: InkWell(
-                                              onTap: () {
-                                                setState(() {
-                                                  if (!isOpen) {
-                                                    if (selecedID ==
-                                                        list[index].id) {
-                                                      openDialog(
-                                                          list[index].id);
-                                                    }
-                                                    selecedID = list[index].id;
-                                                  } else {
-                                                    events.sink.add(
-                                                        NoteEvents.saveNote);
-                                                  }
-                                                });
-                                              },
-                                              child: Container(
-                                                color: getColor(list[index].id),
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
-                                                  child:
-                                                      Text(list[index].title),
-                                                ),
-                                              )),
-                                        )
-                                      ]);
-                                    }
-                                  });
-                            } else {
-                              return const Text('');
-                            }
+                                      )
+                                    ]);
+                                  }
+                                });
+                          } else {
+                            return const Text('');
                           }
-                        }),
-                    Visibility(
-                        visible: isOpen && selecedID == 'new',
-                        child: NoteDialog(
-                          noteEvents: events.stream,
-                          notesRepository: notesRepository,
-                          onClose: () {
-                            closeDialog();
-                          },
-                        )),
-                    Visibility(
-                      visible: !isOpen,
-                      child: ElevatedButton.icon(
-                        icon: const Icon(Icons.add),
-                        onPressed: () => {openDialog("new")},
-                        label: const Text('Neue Notiz'),
-                      ),
-                    ),
-                    Visibility(
-                      visible: isOpen,
-                      child: ElevatedButton.icon(
-                        icon: const Icon(Icons.add),
-                        onPressed: () => {events.sink.add(NoteEvents.saveNote)},
-                        label: const Text('Speichern'),
-                      ),
-                    )
-                  ],
-                ))));
+                        }
+                      }),
+                  /*
+              Visibility(
+                  visible: isOpen && selecedID == 'new',
+                  child: NoteDialog(
+                    noteEvents: events.stream,
+                    notesRepository: notesRepository,
+                    onClose: (id) {
+                      closeDialog(id);
+                    },
+                  )),
+              Visibility(
+                visible: !isOpen,
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.add),
+                  onPressed: () => {openDialog("new")},
+                  label: const Text('Neue Notiz'),
+                ),
+              ),
+              Visibility(
+                visible: isOpen,
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.add),
+                  onPressed: () => {events.sink.add(NoteEvents.saveNote)},
+                  label: const Text('Speichern'),
+                ),
+              ),
+              */
+                ],
+              )),
+        ));
   }
 }

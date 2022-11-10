@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../utils/tools.dart';
 import 'dart:async';
 
@@ -9,16 +12,16 @@ enum NoteEvents {
 
 class NoteDialog extends StatefulWidget {
   const NoteDialog({
+    required this.notesRepository,
     this.noteID,
     required this.noteEvents,
     this.onClose,
-    this.notesRepository,
     Key? key,
   }) : super(key: key);
 
   final Stream<NoteEvents> noteEvents;
-  final VoidCallback? onClose;
-  final NotesRepository? notesRepository;
+  final Function(String?)? onClose;
+  final NotesRepository notesRepository;
   final String? noteID;
 
   @override
@@ -26,7 +29,7 @@ class NoteDialog extends StatefulWidget {
 }
 
 class _NoteDialog extends State<NoteDialog> {
-  VoidCallback? onClose;
+  Function(String?)? onClose;
   NotesRepository? notesRepository;
   String? noteID;
   StreamSubscription<NoteEvents>? _subEvents;
@@ -40,15 +43,9 @@ class _NoteDialog extends State<NoteDialog> {
       }
     });
 
-    if (widget.noteID != null) {
-      noteID = widget.noteID;
-    }
-    if (widget.notesRepository != null) {
-      notesRepository = widget.notesRepository;
-    }
-    if (widget.onClose != null) {
-      onClose = widget.onClose;
-    }
+    noteID = widget.noteID;
+    notesRepository = widget.notesRepository;
+    onClose = widget.onClose;
   }
 
   @override
@@ -78,7 +75,7 @@ class _NoteDialog extends State<NoteDialog> {
 
     if (noteModel.title == "" && noteModel.description == "") {
       if (onClose != null) {
-        onClose!();
+        onClose!("");
       }
 
       return;
@@ -90,60 +87,64 @@ class _NoteDialog extends State<NoteDialog> {
       notesRepository!.updateNote(model: noteModel);
     }
     if (onClose != null) {
-      onClose!();
+      onClose!(noteModel.id);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<NoteModel>(
-        future: note(),
-        builder: (BuildContext context, AsyncSnapshot<NoteModel> note) {
-          if (note.hasData) {
-            if (noteID != null) {
-              controllerTitle.text = Tools.nvlString(note.data!.title);
-              controllerDescription.text =
-                  Tools.nvlString(note.data!.description);
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: FutureBuilder<NoteModel>(
+          future: note(),
+          builder: (BuildContext context, AsyncSnapshot<NoteModel> note) {
+            if (note.hasData) {
+              if (noteID != null) {
+                controllerTitle.text = Tools.nvlString(note.data!.title);
+                controllerDescription.text =
+                    Tools.nvlString(note.data!.description);
+              }
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: TextFormField(
+                          autofocus: true,
+                          controller: controllerTitle,
+                          decoration: const InputDecoration(
+                            border: UnderlineInputBorder(),
+                            hintText: "Aufgabe",
+                          ),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: TextFormField(
+                          minLines: 2,
+                          maxLines: 100,
+                          controller: controllerDescription,
+                          decoration: const InputDecoration(
+                            hintText: "Beschreibung",
+                            border: UnderlineInputBorder(),
+                          ),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8.0),
+                        child: ElevatedButton.icon(
+                          onPressed: () => {saveNote()},
+                          icon: const Icon(Icons.save),
+                          label: const Text(''),
+                        )),
+                  ],
+                ),
+              );
+            } else {
+              return const Text("loading");
             }
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: TextFormField(
-                        controller: controllerTitle,
-                        decoration: const InputDecoration(
-                          border: UnderlineInputBorder(),
-                          hintText: "Aufgabe",
-                        ),
-                      )),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: TextFormField(
-                        minLines: 2,
-                        maxLines: 100,
-                        controller: controllerDescription,
-                        decoration: const InputDecoration(
-                          hintText: "Beschreibung",
-                          border: UnderlineInputBorder(),
-                        ),
-                      )),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: ElevatedButton.icon(
-                        onPressed: () => {saveNote()},
-                        icon: const Icon(Icons.save),
-                        label: const Text('Speichern'),
-                      ))
-                ],
-              ),
-            );
-          } else {
-            return const Text("loading");
-          }
-        });
+          }),
+    );
   }
 }

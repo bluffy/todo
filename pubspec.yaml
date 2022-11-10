@@ -45,6 +45,8 @@ dependencies:
   google_fonts: ^3.0.1
   cbl_flutter_ce: ^2.1.2
   async: ^2.9.0
+  keybinder: ^1.0.1
+  scroll_to_index: ^3.0.1
 
 dev_dependencies:
   flutter_test:
