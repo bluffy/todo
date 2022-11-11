@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
 import '../utils/tools.dart';
@@ -13,6 +15,8 @@ class NoteDialog extends StatefulWidget {
     this.noteID,
     required this.noteEvents,
     this.onClose,
+    this.selectedSort,
+    this.selectedID,
     Key? key,
   }) : super(key: key);
 
@@ -20,7 +24,8 @@ class NoteDialog extends StatefulWidget {
   final Function(String?)? onClose;
   final NotesRepository notesRepository;
   final String? noteID;
-
+  final String? selectedSort;
+  final String? selectedID;
   @override
   State<NoteDialog> createState() => _NoteDialog();
 }
@@ -30,6 +35,9 @@ class _NoteDialog extends State<NoteDialog> {
   NotesRepository? notesRepository;
   String? noteID;
   StreamSubscription<NoteEvents>? _subEvents;
+  NoteModel? note;
+  String? selectedSort;
+  String? selectedID;
 
   @override
   void initState() {
@@ -41,6 +49,8 @@ class _NoteDialog extends State<NoteDialog> {
     });
 
     noteID = widget.noteID;
+    selectedSort = widget.selectedSort;
+    selectedID = widget.selectedID;
     notesRepository = widget.notesRepository;
     onClose = widget.onClose;
   }
@@ -54,7 +64,7 @@ class _NoteDialog extends State<NoteDialog> {
   final controllerTitle = TextEditingController();
   final controllerDescription = TextEditingController();
 
-  Future<NoteModel> note() async {
+  Future<NoteModel> getNote() async {
     //print(" Future<NoteModel> note() async:" + noteID.toString());
     if (noteID != null) {
       return notesRepository!.getNote(noteID.toString());
@@ -66,25 +76,36 @@ class _NoteDialog extends State<NoteDialog> {
   }
 
   saveNote() {
-    final noteModel = NoteModel();
-    noteModel.title = controllerTitle.text.trim();
-    noteModel.description = controllerDescription.text.trim();
-
-    if (noteModel.title == "" && noteModel.description == "") {
-      if (onClose != null) {
-        onClose!("");
+    if (note != null) {
+      if (selectedSort != null && selectedSort != "") {
+        note!.sort = int.parse(selectedSort.toString()) - 1000;
       }
+      note!.title = controllerTitle.text.trim();
+      note!.description = controllerDescription.text.trim();
 
-      return;
+      if (note!.title == "" && note!.description == "") {
+        if (onClose != null) {
+          onClose!("");
+        }
+
+        return;
+      }
+      if (noteID == null) {
+        notesRepository!.createNote(model: note!);
+      } else {
+        note!.id = noteID;
+        notesRepository!.updateNote(model: note!);
+      }
+      if (onClose != null) {
+        onClose!(note!.id);
+      }
     }
-    if (noteID == null) {
-      notesRepository!.createNote(model: noteModel);
-    } else {
-      noteModel.id = noteID;
-      notesRepository!.updateNote(model: noteModel);
-    }
-    if (onClose != null) {
-      onClose!(noteModel.id);
+  }
+
+  fillForm() {
+    if (note != null) {
+      controllerTitle.text = Tools.nvlString(note!.title);
+      controllerDescription.text = Tools.nvlString(note!.description);
     }
   }
 
@@ -93,13 +114,13 @@ class _NoteDialog extends State<NoteDialog> {
     return Container(
       color: Theme.of(context).backgroundColor,
       child: FutureBuilder<NoteModel>(
-          future: note(),
-          builder: (BuildContext context, AsyncSnapshot<NoteModel> note) {
-            if (note.hasData) {
+          future: getNote(),
+          builder: (BuildContext context, AsyncSnapshot<NoteModel> futureNote) {
+            if (futureNote.hasData) {
+              note = futureNote.data;
+
               if (noteID != null) {
-                controllerTitle.text = Tools.nvlString(note.data!.title);
-                controllerDescription.text =
-                    Tools.nvlString(note.data!.description);
+                fillForm();
               }
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),

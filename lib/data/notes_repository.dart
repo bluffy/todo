@@ -31,6 +31,50 @@ class NoteModel {
     this.dateTime,
     this.status,
   });
+  NoteModel nodeModelFromMutal(MutableDocument document) {
+    return NoteModel(
+      id: document.id,
+      title: document.string('title'),
+      description: document.string('description'),
+      sort: document.integer('sort'),
+      isDone: document.integer('isDone'),
+      date: document.string('date'),
+      time: document.string('string'),
+      dateTime: document.integer('dateTime'),
+      status: document.integer('status'),
+    );
+  }
+
+  void fillWithModel(MutableDocument mutableDoc) {
+    mutableDoc['type'].string = type;
+
+    if (sort == null || sort == 0) {
+      mutableDoc['sort'].integer = DateTime.now().microsecondsSinceEpoch;
+    }
+    if (title != null) {
+      mutableDoc['title'].string = title;
+    }
+    if (description != null) {
+      mutableDoc['description'].string = description;
+    }
+    if (description != null) {
+      mutableDoc['description'].string = description;
+    }
+    if (time != null) {
+      mutableDoc['time'].string = time;
+    }
+    if (dateTime != null) {
+      mutableDoc['dateTime'].integer = dateTime!;
+    }
+    if (status != null) {
+      mutableDoc['status'].integer = status!;
+    }
+    if (sort != null) {
+      mutableDoc['sort'].integer = sort!;
+    }
+  }
+
+  /*
   Map<String, dynamic> forInsert() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['type'] = type;
@@ -43,7 +87,8 @@ class NoteModel {
     data['status'] = status;
     data['sort'] = sort;
     return data;
-  }
+  }*/
+
 }
 
 class NotesRepository {
@@ -60,12 +105,13 @@ class NotesRepository {
       model.sort = DateTime.now().microsecondsSinceEpoch;
     }
 
-    final doc = MutableDocument(model.forInsert());
+    final mutableDoc = MutableDocument();
+    model.fillWithModel(mutableDoc);
 
     // Now save the new note in the database.
-    await database.saveDocument(doc);
+    await database.saveDocument(mutableDoc);
 
-    return doc;
+    return mutableDoc;
   }
 
   Future<void> updateNote({
@@ -79,12 +125,7 @@ class NotesRepository {
 
     // Now save the new note in the database.
     final mutableDoc = doc.toMutable();
-    if (model.sort == null || model.sort == 0) {
-      mutableDoc['sort'].integer = DateTime.now().microsecondsSinceEpoch;
-    }
-    mutableDoc['title'].string = model.title;
-    mutableDoc['description'].string = model.description;
-
+    model.fillWithModel(mutableDoc);
     await database.saveDocument(mutableDoc);
   }
 
@@ -177,7 +218,7 @@ class NoteSearchResult {
         // The Result type has typed getters, to extract values from a result.
         id: result.string('id')!,
         title: result.string('title')!,
-        sort: result.integer('sort')!,
+        sort: result.integer('sort'),
       );
 
   final String id;
