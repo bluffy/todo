@@ -1,8 +1,5 @@
-import 'dart:ui';
-
 import 'package:blutodo/data/notes_repository.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../utils/tools.dart';
 import 'dart:async';
 

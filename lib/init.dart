@@ -108,7 +108,7 @@ class DefaultAppInitializer extends AppInitializer {
       // instances of the app, running in parallel, do not use the same
       // database. This is necessary because two or more replicators accessing
       // the same database can cause issues with locking of the database.
-      'notes',
+      'notes-test',
       //'notes-${Random().nextInt(0xFFFFFF)}',
     );
   }

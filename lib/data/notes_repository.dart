@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:ffi';
 
 import 'package:cbl/cbl.dart';
 import 'package:collection/collection.dart';
@@ -40,6 +41,7 @@ class NoteModel {
     data['time'] = time;
     data['dateTime'] = dateTime;
     data['status'] = status;
+    data['sort'] = sort;
     return data;
   }
 }
@@ -54,6 +56,9 @@ class NotesRepository {
     // In Couchbase Lite, data is stored in JSON like documents. The default
     // constructor of MutableDocument creates a new document with a randomly
     // generated id.
+    if (model.sort == null || model.sort == 0) {
+      model.sort = DateTime.now().microsecondsSinceEpoch;
+    }
 
     final doc = MutableDocument(model.forInsert());
 
@@ -73,7 +78,10 @@ class NotesRepository {
     final doc = (await database.document(model.id.toString()))!;
 
     // Now save the new note in the database.
-    final mutableDoc = doc!.toMutable();
+    final mutableDoc = doc.toMutable();
+    if (model.sort == null || model.sort == 0) {
+      mutableDoc['sort'].integer = DateTime.now().microsecondsSinceEpoch;
+    }
     mutableDoc['title'].string = model.title;
     mutableDoc['description'].string = model.description;
 
@@ -106,7 +114,6 @@ class NotesRepository {
   }
 
   Future<NoteModel> getNote(String id) async {
-    print("test: id" + id);
     final document = (await database.document(id))!;
     return NoteModel(
       id: document.id,
@@ -141,11 +148,11 @@ class NotesRepository {
     final query = await Query.fromN1ql(
       database,
       r'''
-    SELECT META().id AS id, title
+    SELECT META().id AS id, title, sort
     FROM _ 
      WHERE  type = 'note'
-    ORDER BY 'sort'
-    LIMIT 100
+    ORDER BY sort desc  
+    LIMIT 1000
     ''',
     );
 
@@ -163,15 +170,17 @@ class NotesRepository {
 }
 
 class NoteSearchResult {
-  NoteSearchResult({required this.id, required this.title});
+  NoteSearchResult({required this.id, required this.title, required this.sort});
 
   /// This method creates a NoteSearchResult from a query result.
   static NoteSearchResult fromResult(Result result) => NoteSearchResult(
         // The Result type has typed getters, to extract values from a result.
         id: result.string('id')!,
         title: result.string('title')!,
+        sort: result.integer('sort')!,
       );
 
   final String id;
   final String title;
+  final int sort;
 }

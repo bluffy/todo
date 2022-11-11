@@ -6,7 +6,6 @@ import '../components/note_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:keybinder/keybinder.dart';
 import 'package:flutter/services.dart';
-import 'package:scroll_to_index/scroll_to_index.dart';
 
 class NotesPage extends StatefulWidget {
   const NotesPage({Key? key}) : super(key: key);
@@ -22,8 +21,6 @@ class _NotesPageState extends State<NotesPage> {
         "################################################################listen");
   });
 
-  late AutoScrollController controller;
-
   @override
   void initState() {
     super.initState();
@@ -31,10 +28,6 @@ class _NotesPageState extends State<NotesPage> {
     final keybinding = Keybinding.from(
         {LogicalKeyboardKey.controlLeft, LogicalKeyboardKey.keyS});
 
-    controller = AutoScrollController(
-        viewportBoundaryGetter: () =>
-            Rect.fromLTRB(0, 0, 0, MediaQuery.of(context).padding.bottom),
-        axis: Axis.vertical);
     Keybinder.bind(keybinding, saveNote);
   }
 
@@ -102,18 +95,12 @@ class _NotesPageState extends State<NotesPage> {
 
   // ItemScrollController _scrollController = ItemScrollController();
 
-  _scrollToindex(i) {}
-
-  Future _scrollToCounter(int index) async {
-    await controller.scrollToIndex(index,
-        preferPosition: AutoScrollPosition.begin);
-    //controller.highlight(index);
-  }
-
   @override
   Widget build(BuildContext context) {
     NotesRepository notesRepository = context.read();
     final notes = notesRepository.searchNotes();
+
+    List<NoteSearchResult> list;
 
     return Scaffold(
         appBar: AppBar(
@@ -153,87 +140,85 @@ class _NotesPageState extends State<NotesPage> {
           width: double.infinity,
           height: double.infinity,
           child: SingleChildScrollView(
-              controller: controller,
               child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Visibility(
-                      visible: isOpen && selecedID == 'new',
-                      child: NoteDialog(
-                        noteEvents: events.stream,
-                        notesRepository: notesRepository,
-                        onClose: (id) {
-                          closeDialog(id);
-                        },
-                      )),
-                  FutureBuilder<List<NoteSearchResult>>(
-                      future: notes,
-                      builder: (context, future) {
-                        if (!future.hasData) {
-                          return const Text(
-                              ''); // Display empty container if the list is empty
-                        } else {
-                          List<NoteSearchResult>? list = future.data;
-                          if (list != null && list.isNotEmpty) {
-                            return ListView.builder(
-                                primary: false,
-                                physics: const NeverScrollableScrollPhysics(),
-                                padding: EdgeInsets.zero,
-                                shrinkWrap: true,
-                                itemCount: list.length,
-                                itemBuilder: (context, index) {
-                                  if (isOpen && selecedID == list[index].id) {
-                                    return NoteDialog(
-                                      noteEvents: events.stream,
-                                      noteID: list[index].id,
-                                      notesRepository: notesRepository,
-                                      onClose: (id) {
-                                        closeDialog(id);
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Visibility(
+                  visible: isOpen && selecedID == 'new',
+                  child: NoteDialog(
+                    noteEvents: events.stream,
+                    notesRepository: notesRepository,
+                    onClose: (id) {
+                      closeDialog(id);
+                    },
+                  )),
+              FutureBuilder<List<NoteSearchResult>>(
+                  future: notes,
+                  builder: (context, future) {
+                    if (!future.hasData) {
+                      return const Text(
+                          ''); // Display empty container if the list is empty
+                    } else {
+                      list = future.data!;
+                      if (list.isNotEmpty) {
+                        return ListView.builder(
+                            primary: false,
+                            physics: const NeverScrollableScrollPhysics(),
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            itemCount: list.length,
+                            itemBuilder: (context, index) {
+                              if (isOpen && selecedID == list[index].id) {
+                                return NoteDialog(
+                                  noteEvents: events.stream,
+                                  noteID: list[index].id,
+                                  notesRepository: notesRepository,
+                                  onClose: (id) {
+                                    closeDialog(id);
+                                  },
+                                );
+                              } else {
+                                return Row(children: [
+                                  Checkbox(
+                                    onChanged:
+                                        !isOpen ? (bool? value) => {} : null,
+                                    value: false,
+                                  ),
+                                  Expanded(
+                                    child: InkWell(
+                                      autofocus: (!isOpen &&
+                                          list[index].id == selecedID),
+                                      onTap: () {
+                                        setState(() {
+                                          if (!isOpen) {
+                                            if (selecedID == list[index].id) {
+                                              openDialog(list[index].id);
+                                            }
+                                            selecedID = list[index].id;
+                                          } else {
+                                            events.sink
+                                                .add(NoteEvents.saveNote);
+                                          }
+                                        });
                                       },
-                                    );
-                                  } else {
-                                    return Row(children: [
-                                      Checkbox(
-                                        onChanged: !isOpen
-                                            ? (bool? value) => {}
-                                            : null,
-                                        value: false,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(list[index].title +
+                                            ': ' +
+                                            list[index].sort.toString()),
                                       ),
-                                      Expanded(
-                                        child: InkWell(
-                                          autofocus: (!isOpen &&
-                                              list[index].id == selecedID),
-                                          onTap: () {
-                                            setState(() {
-                                              if (!isOpen) {
-                                                if (selecedID ==
-                                                    list[index].id) {
-                                                  //   openDialog(list[index].id);
-                                                }
-                                                selecedID = list[index].id;
-                                              } else {
-                                                events.sink
-                                                    .add(NoteEvents.saveNote);
-                                              }
-                                              _scrollToCounter(index);
-                                            });
-                                          },
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text(list[index].title),
-                                          ),
-                                        ),
-                                      )
-                                    ]);
-                                  }
-                                });
-                          } else {
-                            return const Text('');
-                          }
-                        }
-                      }),
-                  /*
+                                    ),
+                                  )
+                                ]);
+                              }
+                            });
+                      } else {
+                        return const Text('');
+                      }
+                    }
+                  }),
+              /*
               Visibility(
                   visible: isOpen && selecedID == 'new',
                   child: NoteDialog(
@@ -260,8 +245,8 @@ class _NotesPageState extends State<NotesPage> {
                 ),
               ),
               */
-                ],
-              )),
+            ],
+          )),
         ));
   }
 }
