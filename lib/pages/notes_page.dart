@@ -38,23 +38,9 @@ class _NotesPageState extends State<NotesPage> {
     super.dispose();
   }
 
-//final KeyBindSave = Keybinding({KeyCode.ctrl, KeyCode.from(KeyboardKey) });
-
-  final KeyBindSave = KeyCode.fromSet(
-      {LogicalKeyboardKey.controlLeft, LogicalKeyboardKey.keyS});
-
-  //var _isInitialized = false;
   bool isOpen = false;
   var selecedID = "0";
-  var test = "";
-
-  var noteModel = NoteModel();
-
-  void modelChanged(m) {
-    setState(() {
-      noteModel = m;
-    });
-  }
+  var selectedSort = "0";
 
   void openDialog(String id) {
     setState(() {
@@ -65,42 +51,32 @@ class _NotesPageState extends State<NotesPage> {
 
   void closeDialog(String? id) {
     setState(() {
-      noteModel = NoteModel();
       selecedID = id.toString();
       isOpen = false;
     });
-  }
-
-  Color getColor(BuildContext context, String id) {
-    //return setState(() {
-
-    // setState(() {
-    if (id == selecedID) {
-      return Theme.of(context).highlightColor;
-    }
-    return Colors.transparent;
-
-    //  });
-
-    // });
   }
 
   void saveNote() {
     events.sink.add(NoteEvents.saveNote);
   }
 
-  void onKeyToggled(Keybinding keybinding, bool pressed) {
-    print('$keybinding was ${pressed ? 'pressed' : 'released'}');
-  }
-
-  // ItemScrollController _scrollController = ItemScrollController();
-
   @override
   Widget build(BuildContext context) {
     NotesRepository notesRepository = context.read();
     final notes = notesRepository.searchNotes();
-
     List<NoteSearchResult> list;
+
+    final focusNode = FocusNode();
+    focusNode.addListener(() {
+      if (!focusNode.hasFocus) {
+        /*
+        setState(() {
+          selecedID = "";
+          selectedSort = "";
+        });
+        */
+      }
+    });
 
     return Scaffold(
         appBar: AppBar(
@@ -144,80 +120,88 @@ class _NotesPageState extends State<NotesPage> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text("selectedid: ${selecedID} "),
               Visibility(
                   visible: isOpen && selecedID == 'new',
                   child: NoteDialog(
                     noteEvents: events.stream,
                     notesRepository: notesRepository,
+                    selectedID: selecedID,
+                    selectedSort: selectedSort,
                     onClose: (id) {
                       closeDialog(id);
                     },
                   )),
-              FutureBuilder<List<NoteSearchResult>>(
-                  future: notes,
-                  builder: (context, future) {
-                    if (!future.hasData) {
-                      return const Text(
-                          ''); // Display empty container if the list is empty
-                    } else {
-                      list = future.data!;
-                      if (list.isNotEmpty) {
-                        return ListView.builder(
-                            primary: false,
-                            physics: const NeverScrollableScrollPhysics(),
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            itemCount: list.length,
-                            itemBuilder: (context, index) {
-                              if (isOpen && selecedID == list[index].id) {
-                                return NoteDialog(
-                                  noteEvents: events.stream,
-                                  noteID: list[index].id,
-                                  notesRepository: notesRepository,
-                                  onClose: (id) {
-                                    closeDialog(id);
-                                  },
-                                );
-                              } else {
-                                return Row(children: [
-                                  Checkbox(
-                                    onChanged:
-                                        !isOpen ? (bool? value) => {} : null,
-                                    value: false,
-                                  ),
-                                  Expanded(
-                                    child: InkWell(
-                                      autofocus: (!isOpen &&
-                                          list[index].id == selecedID),
-                                      onTap: () {
-                                        setState(() {
-                                          if (!isOpen) {
-                                            if (selecedID == list[index].id) {
-                                              openDialog(list[index].id);
-                                            }
-                                            selecedID = list[index].id;
-                                          } else {
-                                            events.sink
-                                                .add(NoteEvents.saveNote);
-                                          }
-                                        });
-                                      },
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(list[index].title +
-                                            ': ' +
-                                            list[index].sort.toString()),
-                                      ),
-                                    ),
-                                  )
-                                ]);
-                              }
-                            });
+              Focus(
+                focusNode: focusNode,
+                child: FutureBuilder<List<NoteSearchResult>>(
+                    future: notes,
+                    builder: (context, future) {
+                      if (!future.hasData) {
+                        return const Text(
+                            ''); // Display empty container if the list is empty
                       } else {
-                        return const Text('');
+                        list = future.data!;
+                        if (list.isNotEmpty) {
+                          return ListView.builder(
+                              primary: false,
+                              physics: const NeverScrollableScrollPhysics(),
+                              padding: EdgeInsets.zero,
+                              shrinkWrap: true,
+                              itemCount: list.length,
+                              itemBuilder: (context, index) {
+                                if (isOpen && selecedID == list[index].id) {
+                                  return NoteDialog(
+                                    noteEvents: events.stream,
+                                    noteID: list[index].id,
+                                    notesRepository: notesRepository,
+                                    onClose: (id) {
+                                      closeDialog(id);
+                                    },
+                                  );
+                                } else {
+                                  return Row(children: [
+                                    Checkbox(
+                                      onChanged:
+                                          !isOpen ? (bool? value) => {} : null,
+                                      value: false,
+                                    ),
+                                    Expanded(
+                                      child: InkWell(
+                                        autofocus: (!isOpen &&
+                                            list[index].id == selecedID),
+                                        onTap: () {
+                                          setState(() {
+                                            if (!isOpen) {
+                                              if (selecedID == list[index].id) {
+                                                openDialog(list[index].id);
+                                              }
+                                              selecedID = list[index].id;
+                                              //selectedSort =
+                                              //list[index].sort.toString();
+                                            } else {
+                                              events.sink
+                                                  .add(NoteEvents.saveNote);
+                                            }
+                                          });
+                                        },
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(list[index].title +
+                                              ': ' +
+                                              list[index].sort.toString()),
+                                        ),
+                                      ),
+                                    )
+                                  ]);
+                                }
+                              });
+                        } else {
+                          return const Text('');
+                        }
                       }
-                    }
-                  }),
+                    }),
+              ),
               /*
               Visibility(
                   visible: isOpen && selecedID == 'new',
